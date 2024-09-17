@@ -2632,32 +2632,29 @@ input, select, textarea {
 				width: 100%;
 			}
 
-		.image.main {
-			display: block;
-			margin: 4rem 0;
-			width: 50%;
-			margin: 0 auto;
-		}
-
-			.image.main:first-child {
-				margin-top: 0;
+			.image.main-container {
+				display: flex;
+				justify-content: center; 
+				gap: 20px; 
+				margin: 4rem 0; 
 			}
-
+			
+			.image.main {
+				width: 45%; 
+			}
+			
 			.image.main img {
 				width: 100%;
 			}
-
-		@media screen and (max-width: 736px) {
-
-			.image.fit {
-				margin: 2rem 0;
+			
+			@media screen and (max-width: 736px) {
+				.image.main-container {
+					flex-direction: column; 
+				}
+				.image.main {
+					width: 100%; 
+				}
 			}
-
-			.image.main {
-				margin: 2rem 0;
-			}
-
-		}
 
 	a.image {
 		overflow: hidden;
