@@ -4688,6 +4688,7 @@ input, select, textarea {
 
 	/* Photo Gallery Styles */
 .photo-gallery {
+	max-width: 1200px;
     padding: 2rem;
     display: flex;
     justify-content: center;
@@ -4729,7 +4730,7 @@ input, select, textarea {
 
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
-    .gallery-item.large, .gallery-item.medium, .gallery-item.small {
+    .gallery-item, .gallery-item.large, .gallery-item.medium, .gallery-item.small {
         flex: 1 1 100%;
     }
 }
