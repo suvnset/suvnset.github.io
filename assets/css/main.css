@@ -4685,3 +4685,65 @@ input, select, textarea {
 		}
 
 	}
+
+	/* Photo Gallery Styles */
+.photo-gallery {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.gallery-item {
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Different size options */
+.gallery-item.large {
+    flex: 1 1 45%;
+}
+
+.gallery-item.medium {
+    flex: 1 1 30%;
+}
+
+.gallery-item.small {
+    flex: 1 1 20%;
+}
+
+.gallery-item.xsmall {
+    flex: 1 1 15%;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .gallery-item.large, .gallery-item.medium, .gallery-item.small {
+        flex: 1 1 100%;
+    }
+}
+
+.gallery-item img {
+	-moz-transition: -moz-transform 0.2s ease-out;
+	-webkit-transition: -webkit-transform 0.2s ease-out;
+	-ms-transition: -ms-transform 0.2s ease-out;
+	transition: transform 0.2s ease-out;
+}
+
+.gallery-item:hover img {
+	-moz-transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	transform: scale(1.05);
+}
