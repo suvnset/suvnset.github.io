@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Production + PACN — Joshua Guico</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=Inter:wght@400;500;700;900&family=Noto+Sans+Tagalog&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=20260705-cleanup-media" />
+  </head>
+  <body data-page="category" data-category="production">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <!-- fixed visual texture layers shared across pages. -->
+    <div class="grain" aria-hidden="true"></div><div class="vignette" aria-hidden="true"></div><div class="light-leak leak-one" aria-hidden="true"></div><div class="light-leak leak-two" aria-hidden="true"></div>
+    <!-- site identity and archive navigation. -->
+    <header class="site-header" data-reveal>
+      <a class="brand" href="index.html"><span class="brand-mark baybayin">ᜇ᜔ᜌᜓ</span><span>Joshua Guico</span></a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="software.html" data-nav="software">SWE</a><a href="games.html" data-nav="game">Games</a><a href="design.html" data-nav="design">Design</a><a href="production.html" data-nav="production">Production</a>
+      </nav>
+    </header>
+    <main id="main">
+      <!-- archive hero is rendered from the current body category. -->
+      <section class="archive-hero section" data-render-category-hero data-reveal></section>
+      <!-- static production note introduces the page focus. -->
+      <section class="section production-note" data-reveal>
+        <div class="script-card negative-frame">
+          <p class="section-kicker">PACE / scripts / directing</p>
+          <h2>Culture work as production leadership.</h2>
+          <p>
+            Scripts, show concepts, rehearsal processes, run-of-show thinking,
+            and production systems from Pilipinx American Culture Events.
+          </p>
+        </div>
+      </section>
+      <!-- category projects are rendered from matching project data. -->
+      <section class="section">
+        <div class="section-heading" data-reveal><p class="section-kicker">Production case studies</p><h2>Stage and script negatives</h2><p>Cultural storytelling documented with the same care as technical projects.</p></div>
+        <div class="project-grid" data-render-projects="category" data-reveal></div>
+      </section>
+    </main>
+    <!-- data loads before render logic. -->
+    <script src="data.js?v=20260705-cleanup-media"></script><script src="script.js?v=20260705-cleanup-media"></script>
+  </body>
+</html>

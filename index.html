@@ -1,166 +1,176 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Joshua Guico Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Joshua Guico — software engineer, game developer, designer, and cultural production portfolio."
+    />
+    <title>Joshua Guico — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=Inter:wght@400;500;700;900&family=Noto+Sans+Tagalog&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=20260705-cleanup-media" />
+  </head>
+  <body data-page="home">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <!-- fixed visual texture layers shared across pages. -->
+    <div class="grain" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="light-leak leak-one" aria-hidden="true"></div>
+    <div class="light-leak leak-two" aria-hidden="true"></div>
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+    <!-- site identity and archive navigation. -->
+    <header class="site-header" data-reveal>
+      <a class="brand" href="index.html" aria-label="Joshua Guico home">
+        <span class="brand-mark baybayin" aria-hidden="true">ᜇ᜔ᜌᜓ</span>
+        <span>Joshua Guico</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="software.html" data-nav="software">SWE</a>
+        <a href="games.html" data-nav="game">Games</a>
+        <a href="design.html" data-nav="design">Design</a>
+        <a href="production.html" data-nav="production">Production</a>
+      </nav>
+    </header>
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Joshua Guico</h1>
-						<p>A creator; whether it is games, software, or design, I enjoy creating. <a href="https://html5up.net/license">Creative Commons license</a>.</p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+    <main id="main">
+      <!-- first-screen introduction and mood frame. -->
+      <section class="hero terrace-hero" aria-labelledby="hero-title">
+        <div class="hero-copy" data-reveal>
+          <p class="eyebrow">Software Engineer · Game Developer · Designer · Cultural Producer</p>
+          <h1 id="hero-title">Hello World!</h1>
+          <p class="hero-subtitle">
+            I’m Joshua Guico, an incoming M.S. Computer Science student and a recent B.S. Computer Science (Games) graduate at the University of Southern California. 
+            I enjoy building gameplay systems, full-stack tools, visual stories, and community productions. 
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#featured">Enter the reel</a>
+            <a class="button secondary" href="project.html?project=photo-diary">View a case study</a>
+          </div>
+        </div>
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Guico</a>
-					</header>
+        <aside class="hero-polaroid film-border-real" data-reveal aria-label="Portfolio mood frame">
+          <div class="film-edge top">
+            <span>400TX</span><span>01</span>
+          </div>
+          <div class="terrace-card-image cover-photo-frame" style="--cover-position: 50% 34%;">
+            <img class="hero-cover-image" src="assets/site-covers/index.jpg" alt="Joshua standing by the USC Tommy Trojan statue in graduation regalia." loading="eager" decoding="async" />
+          </div>
+          <div class="film-edge bottom" aria-hidden="true">
+            <span>JSG</span><span>2026</span><span>MANUAL CODE</span>
+          </div>
+        </aside>
+      </section>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Home</a></li>
-							<li><a href="projects.html">Projects</a></li>
-							<li><a href="videogames.html">Video Game Remakes</a></li>
-							<li><a href="design.html">Design</a></li>
-							<li><a href="photography.html">Photography</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://www.instagram.com/jguicoo/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="https://github.com/suvnset" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+      <!-- repeating archive keywords for the film-reel rhythm. -->
+      <section class="marquee infinite" aria-label="Infinite Baybayin and portfolio reel" data-reveal>
+        <div class="marquee-track">
+          <div class="marquee-content">
+            <span class="baybayin">ᜋᜑᜎᜄ</span><span>systems</span><span class="baybayin">ᜎᜎᜇ᜔</span><span>games</span>
+            <span class="baybayin">ᜃᜉ᜔ᜏ</span><span>design</span><span class="baybayin">ᜉᜋᜈ</span><span>production</span>
+          </div>
+          <div class="marquee-content" aria-hidden="true">
+            <span class="baybayin">ᜋᜑᜎᜄ</span><span>systems</span><span class="baybayin">ᜎᜎᜇ᜔</span><span>games</span>
+            <span class="baybayin">ᜃᜉ᜔ᜏ</span><span>design</span><span class="baybayin">ᜉᜋᜈ</span><span>production</span>
+          </div>
+        </div>
+      </section>
 
-				<!-- Main -->
-					<div id="main">
+      <!-- categories are rendered from data.js. -->
+      <section class="section category-portals" aria-labelledby="archive-title">
+        <div class="section-heading" data-reveal>
+          <p class="section-kicker">Choose an archive</p>
+          <h2 id="archive-title">Project rooms</h2>
+        </div>
+        <div class="portal-grid" data-render-categories data-reveal></div>
+      </section>
 
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<h2><a href="#">About Me</a></h2>
-									<p>A junior undergraduate studying Computer Science, with an emphasis in Games, <br / > at the University of Southern California, ranked as the #1 University for Game Development.</p>
-								</header>
-								<section class="photo-gallery">
-									<div class="gallery">
-										<div class="gallery-item large"><img src="images/Professional.jpg" alt="Headshot of Joshua in front of Doheny Library"/></div>
-										<div class="gallery-item large"><img src="images/sitting.png" alt="Picture of Joshua Sitting on a USC Soccer Field"/></div>
-									</div>
-								</section>
-							</article>
+      <!-- featured projects are rendered from script.js. -->
+      <section class="section" id="featured" aria-labelledby="featured-title">
+        <div class="section-heading" data-reveal>
+          <p class="section-kicker">Selected frames</p>
+          <h2 id="featured-title">Featured work</h2>
+          <p>
+            Click any frame to open a full project page with sections for what it is,
+            goals, constraints, process, key solutions, takeaways, and launch links.
+          </p>
+        </div>
+        <div class="project-grid" data-render-projects="featured" data-limit="14" data-reveal></div>
+      </section>
 
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										<h2><a href="projects.html">Projects</a></h2>
-									</header>
-									<a href="projects.html" class="image fit"><img src="images/sidereal.png" alt="Screenshot of Photo Diary Project" /></a>
-									<p>Class, club, and personal projects I've worked on at USC!</p>
-									<ul class="actions special">
-										<li><a href="projects.html" class="button">Project Portfolio</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="videogames.html">Video Game Remakes</a></h2>
-									</header>
-									<a href="videogames.html" class="image fit"><img src="images/thumbnail4.png" alt="Screenshot of Portal Gameplay" /></a>
-									<p>Retro games I remade in C++ for a video game class!</p>
-									<ul class="actions special">
-										<li><a href="videogames.html" class="button">Video Game Portfolio</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="design.html">Design</a></h2>
-									</header>
-									<a href="design.html" class="image fit"><img src="images/thumbnail3.png" alt="Graphic Design Image for VCT Americas Finals Watchparty" /></a>
-									<p>Graphics I've made for clubs or personal use!</p>
-									<ul class="actions special">
-										<li><a href="design.html" class="button">Design Portfolio</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="photography.html">Photography</a></h2>
-									</header>
-									<a href="photography.html" class="image fit"><img src="images/thumbnail2.png" alt="Photo of Solar Panels at Sunset" /></a>
-									<p>Recently picked up photography, so here are some pics!</p>
-									<ul class="actions special">
-										<li><a href="photography.html" class="button">Photography Portfolio</a></li>
-									</ul>
-								</article>
-							</section>
-					</div>
+      <!-- horizontal reel is rendered from the project data. -->
+      <section class="section reel-section" aria-labelledby="reel-title">
+        <div class="section-heading" data-reveal>
+          <p class="section-kicker">Interactive film reel</p>
+          <h2 id="reel-title">Drag through the negatives</h2>
+          <p>
+            The reel now uses sprocket holes, edge codes, frame counters, and a
+            darker negative border so it feels more like scanned film.
+          </p>
+        </div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-						</section>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>University of Southern California<br />
-								Los Angeles, CA 90007</p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">suvnset@gmail.com</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="https://www.instagram.com/jguicoo/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="https://github.com/suvnset" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
+        <div class="film-strip-real draggable" tabindex="0" aria-label="Horizontal film reel" data-reveal>
+          <div class="film-perfs top" aria-hidden="true"></div>
+          <div class="film-frames" data-render-reel></div>
+          <div class="film-perfs bottom" aria-hidden="true"></div>
+        </div>
+      </section>
 
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
+      <!-- static proof section that explains the visual archive. -->
+      <section class="section photo-background-note" data-reveal>
+        <div class="negative-frame split-frame film-style-orange">
+          <div class="frame-window terrace-window">
+            <img src="assets/rice-terraces-reference.jpg" alt="Landscape rice terraces used as a warm visual archive image." loading="lazy" decoding="async" />
+          </div>
+          <div class="frame-copy">
+            <p class="section-kicker">Visual archive</p>
+            <h2>Process artifacts from games, software, and productions.</h2>
+            <p>
+              Trailers, playtest tables, card prototypes, scripts, programs, and
+              rehearsal systems sit beside the finished work so each project keeps
+              its making visible.
+            </p>
+          </div>
+        </div>
+      </section>
 
-			</div>
+      <!-- contact links and final callout. -->
+      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+        <div data-reveal>
+          <p class="section-kicker">End credits</p>
+          <h2 id="contact-title">Let’s build something with feeling.</h2>
+          <p>Software, games, production, and visual systems all meet here: technical enough to hold up, expressive enough to remember.</p>
+          <div class="contact-links">
+            <a href="mailto:jshguico@gmail.com">Email</a>
+            <a href="https://github.com/suvnset">GitHub</a>
+            <a href="https://www.linkedin.com/in/joshuaguico">LinkedIn</a>
+            <a href="https://github.com/suvnset/playtestiq">Resume</a>
+          </div>
+        </div>
+      </section>
+    </main>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    <!-- decorative footer marquee. -->
+    <footer class="site-footer">
+      <div class="footer-marquee infinite" aria-hidden="true">
+        <div class="marquee-track slow">
+          <div class="marquee-content">
+            <span>JOSHUA GUICO</span><span>ᜋᜑᜎᜄ</span><span>SOFTWARE</span><span>GAMES</span><span>DESIGN</span><span>PACN</span>
+          </div>
+          <div class="marquee-content">
+            <span>JOSHUA GUICO</span><span>ᜋᜑᜎᜄ</span><span>SOFTWARE</span><span>GAMES</span><span>DESIGN</span><span>PACN</span>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-	</body>
+    <!-- data loads before render logic. -->
+    <script src="data.js?v=20260705-cleanup-media"></script>
+    <script src="script.js?v=20260705-cleanup-media"></script>
+  </body>
 </html>
