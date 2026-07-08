@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=Inter:wght@400;500;700;900&family=Noto+Sans+Tagalog&family=Space+Grotesk:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260705-cleanup-media" />
+    <link rel="stylesheet" href="styles.css?v=20260707-copy-polish" />
   </head>
   <body data-page="home">
     <a class="skip-link" href="#main">Skip to content</a>
@@ -43,14 +43,14 @@
       <section class="hero terrace-hero" aria-labelledby="hero-title">
         <div class="hero-copy" data-reveal>
           <p class="eyebrow">Software Engineer · Game Developer · Designer · Cultural Producer</p>
-          <h1 id="hero-title">Hello World!</h1>
+          <h1 id="hero-title">Joshua Guico</h1>
           <p class="hero-subtitle">
-            I’m Joshua Guico, an incoming M.S. Computer Science student and a recent B.S. Computer Science (Games) graduate at the University of Southern California. 
-            I enjoy building gameplay systems, full-stack tools, visual stories, and community productions. 
+            I’m Joshua Guico, an incoming M.S. Computer Science student and recent B.S. Computer Science (Games) graduate at the University of Southern California.
+            I build gameplay systems, full-stack tools, visual stories, and community productions with a soft spot for work that feels personal.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#featured">Enter the reel</a>
-            <a class="button secondary" href="project.html?project=photo-diary">View a case study</a>
+            <a class="button primary" href="#featured">View selected work</a>
+            <a class="button secondary" href="project.html?project=photo-diary">Start with Photo Diary</a>
           </div>
         </div>
 
@@ -96,44 +96,43 @@
           <p class="section-kicker">Selected frames</p>
           <h2 id="featured-title">Featured work</h2>
           <p>
-            Click any frame to open a full project page with sections for what it is,
-            goals, constraints, process, key solutions, takeaways, and launch links.
+            Each frame opens into a fuller case study: what I was trying to make,
+            what got hard, what I built, and what I took from it.
           </p>
         </div>
-        <div class="project-grid" data-render-projects="featured" data-limit="14" data-reveal></div>
+        <div class="project-grid" data-render-projects="featured" data-limit="6" data-reveal></div>
       </section>
 
-      <!-- horizontal reel is rendered from the project data. -->
+      <!-- secondary projects are rendered from the project data. -->
       <section class="section reel-section" aria-labelledby="reel-title">
         <div class="section-heading" data-reveal>
-          <p class="section-kicker">Interactive film reel</p>
-          <h2 id="reel-title">Drag through the negatives</h2>
+          <p class="section-kicker">Also in the archive</p>
+          <h2 id="reel-title">Other project rooms</h2>
           <p>
-            The reel now uses sprocket holes, edge codes, frame counters, and a
-            darker negative border so it feels more like scanned film.
+            Smaller builds, class projects, prototypes, visual work, and production
+            pages that still say something useful about how I think.
           </p>
         </div>
 
-        <div class="film-strip-real draggable" tabindex="0" aria-label="Horizontal film reel" data-reveal>
+        <div class="film-strip-real draggable" tabindex="0" aria-label="Other projects carousel" data-reveal>
           <div class="film-perfs top" aria-hidden="true"></div>
           <div class="film-frames" data-render-reel></div>
           <div class="film-perfs bottom" aria-hidden="true"></div>
         </div>
       </section>
 
-      <!-- static proof section that explains the visual archive. -->
+      <!-- personal archive section. -->
       <section class="section photo-background-note" data-reveal>
         <div class="negative-frame split-frame film-style-orange">
           <div class="frame-window terrace-window">
-            <img src="assets/rice-terraces-reference.jpg" alt="Landscape rice terraces used as a warm visual archive image." loading="lazy" decoding="async" />
+            <img src="assets/design-gallery/semester-seven-1.png" alt="Graduation collage with Joshua and friends in USC regalia." loading="lazy" decoding="async" />
           </div>
           <div class="frame-copy">
-            <p class="section-kicker">Visual archive</p>
-            <h2>Process artifacts from games, software, and productions.</h2>
+            <p class="section-kicker">Personal archive</p>
+            <h2>Life in the margins.</h2>
             <p>
-              Trailers, playtest tables, card prototypes, scripts, programs, and
-              rehearsal systems sit beside the finished work so each project keeps
-              its making visible.
+              Friends, campus light, graduation fragments, and the in-between
+              scenes that remind me the work belongs to a life, not just a resume.
             </p>
           </div>
         </div>
@@ -143,8 +142,8 @@
       <section class="section contact-section" id="contact" aria-labelledby="contact-title">
         <div data-reveal>
           <p class="section-kicker">End credits</p>
-          <h2 id="contact-title">Let’s build something with feeling.</h2>
-          <p>Software, games, production, and visual systems all meet here: technical enough to hold up, expressive enough to remember.</p>
+          <h2 id="contact-title">Let’s talk.</h2>
+          <p>I’m always glad to talk through software, games, production, design, or the strange overlap between all four.</p>
           <div class="contact-links">
             <a href="mailto:jshguico@gmail.com">Email</a>
             <a href="https://github.com/suvnset">GitHub</a>
@@ -170,7 +169,7 @@
     </footer>
 
     <!-- data loads before render logic. -->
-    <script src="data.js?v=20260705-cleanup-media"></script>
-    <script src="script.js?v=20260705-cleanup-media"></script>
+    <script src="data.js?v=20260707-copy-polish"></script>
+    <script src="script.js?v=20260707-copy-polish"></script>
   </body>
 </html>

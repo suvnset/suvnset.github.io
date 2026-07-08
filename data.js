@@ -6,7 +6,7 @@ window.PORTFOLIO_DATA = {
       label: "Software Engineering",
       eyebrow: "SWE Archive",
       intro:
-        "Full-stack apps, engine tools, systems programming, and product-minded technical projects.",
+        "Full-stack apps, engine tools, systems programming, and technical projects with a product sense.",
       coverImage: "assets/site-covers/software.jpeg",
       coverAlt: "Software archive cover portrait with Joshua in a striped shirt and tie.",
       coverPosition: "44% 42%",
@@ -439,7 +439,7 @@ window.PORTFOLIO_DATA = {
       coverAlt: "Updated PHOTO DIARY xForever list view showing newest memories, filters, and seeded project posts.",
       links: [
         { label: "Updated screens", url: "#screens" },
-        { label: "Before / after proof", url: "#gallery" },
+        { label: "Before / after", url: "#gallery" },
         { label: "Technical flow", url: "#technical" }
       ],
       summary:
@@ -454,7 +454,7 @@ window.PORTFOLIO_DATA = {
       constraints: [
         "The original app already had useful CRUD and auth behavior, but the interface needed a clearer product story and stronger visual hierarchy.",
         "Seed accounts and guest mode had to expose privacy differences without asking viewers to manually create test data first.",
-        "Map, list, upload, entry-detail, likes, filters, friends, and visibility rules all needed to stay legible across desktop and responsive layouts."
+        "Map, list, upload, entry-detail, likes, filters, friends, and visibility rules all had to stay readable across desktop and responsive layouts."
       ],
       process: [
         {
@@ -477,7 +477,7 @@ window.PORTFOLIO_DATA = {
         "Docker Compose now runs the Maven-built WAR on Tomcat with a MySQL container that loads schema and seed data automatically.",
         "Leaflet.js and OpenStreetMap power a spatial diary with color-coded pins for personal, friend-visible, and public posts.",
         "The chronological list adds search, audience filters, metadata, likes, and richer seeded entries so the app no longer opens on empty states.",
-        "The create and entry-detail views keep image upload, captions, coordinates, privacy, likes, friend actions, and navigation in a more polished product shell.",
+        "The create and entry-detail views bring image upload, captions, coordinates, privacy, likes, friend actions, and navigation into a cleaner product shell.",
         "Guest users can browse public memories while registered users can create, like, edit, delete, and build friend relationships."
       ],
       technicalTitle: "Refresh architecture",
@@ -613,7 +613,7 @@ window.PORTFOLIO_DATA = {
           alt: "Earlier create-entry form with image upload, caption, longitude, latitude, and privacy controls.",
           eyebrow: "Before",
           title: "Original create form",
-          body: "The core upload and privacy pipeline existed before the refresh, giving the rebuild a solid functional base.",
+          body: "The original upload and privacy logic existed before the refresh, giving the rebuild a useful technical base.",
           position: "top center"
         },
         {
@@ -671,13 +671,6 @@ window.PORTFOLIO_DATA = {
           title: "Refined creation flow",
           body: "The refreshed form keeps the original data requirements while making image preview, location, and visibility easier to understand.",
           fit: "contain"
-        },
-        {
-          image: "assets/black-placeholder.svg",
-          alt: "Black placeholder reserved for a future Photo Diary architecture visual.",
-          eyebrow: "Architecture",
-          title: "Backend and map integration",
-          body: "Placeholder slot for a future architecture visual; the technical story still centers on Java servlets, MySQL persistence, and Leaflet/OpenStreetMap views."
         }
       ],
       launchNote:
@@ -694,23 +687,23 @@ window.PORTFOLIO_DATA = {
       status: "In development",
       glyph: "ᜐᜓᜃᜆ᜔",
       color: "forest",
-      coverImage: "assets/black-placeholder.svg",
-      coverAlt: "Black placeholder reserved for a future PlaytestIQ cover image.",
+      coverImage: "assets/playtestiq/playtestiq-dashboard-cover.png",
+      coverAlt: "PlaytestIQ dashboard screenshot showing event totals, unique players, sessions, and a top-events bar chart.",
       links: [
         { label: "GitHub repo", url: "https://github.com/suvnset/playtestiq" },
         { label: "Technical build", url: "#technical" },
         { label: "Development status", url: "#launch" }
       ],
       summary:
-        "An in-development analytics platform for game teams, designed to capture playtest projects, players, sessions, and event telemetry so teams can turn raw play into clearer product decisions.",
+        "An in-progress analytics dashboard for game teams, tracking projects, players, sessions, and gameplay events so playtests are easier to read.",
       what:
-        "PlaytestIQ is a new full-stack software project aimed at making game playtests easier to instrument and interpret. The current build is still early: the repo has a Next.js and React app scaffold, a Prisma/Postgres data layer, Dockerized local database setup, and the first analytics schema for projects, players, sessions, and events. The long-term product direction is a dashboard that helps developers understand where players struggle, what they repeat, how sessions unfold, and which design choices deserve the next test.",
+        "PlaytestIQ is my current full-stack project for making playtest data easier to collect and interpret. The build has a Next.js and React front end, a Prisma/Postgres data model, Dockerized local database setup, and the first telemetry schema for projects, players, sessions, and events. The direction is practical: help a team see where players struggle, what they repeat, how sessions unfold, and what deserves the next test.",
       goals: [
-        "Build a product-minded analytics tool for game teams running playtests, prototypes, and usability sessions.",
-        "Define a clean telemetry foundation before building dashboard polish: projects, API keys, players, sessions, events, and flexible event properties.",
+        "Build a practical analytics tool for game teams running playtests, prototypes, and usability sessions.",
+        "Start with the data contract before making the dashboard pretty: projects, API keys, players, sessions, events, and flexible event properties.",
         "Support external player and session identifiers so instrumented games can send data without reshaping their own internal IDs.",
         "Use a modern full-stack web stack that can grow into authenticated project management, ingestion APIs, and data visualization.",
-        "Keep the early MVP honest: prove the data contract and analytics workflow before over-designing the front-end."
+        "Keep the early MVP honest: send events, store them, query them, and make the results readable."
       ],
       constraints: [
         "The public-facing product UI is not final yet, so the portfolio entry needs to frame the project as active development rather than a finished launch.",
@@ -752,7 +745,7 @@ window.PORTFOLIO_DATA = {
           eyebrow: "Frontend",
           title: "Next.js + React app shell",
           body:
-            "The project starts from a TypeScript Next.js app, giving the product a path toward server-rendered pages, API routes, dashboard views, and deployable web workflows."
+            "The project starts from a TypeScript Next.js app, giving the product a path toward server-rendered pages, API routes, dashboard views, and deployable web flows."
         },
         {
           eyebrow: "Database",
@@ -764,7 +757,7 @@ window.PORTFOLIO_DATA = {
           eyebrow: "Instrumentation",
           title: "Project-scoped API keys",
           body:
-            "Each tracked game project is designed to own an API key, which sets up a clean boundary for future event ingestion and dashboard filtering."
+            "Each tracked game project owns an API key, which sets up a clean boundary for event ingestion and dashboard filtering."
         },
         {
           eyebrow: "Identity",
@@ -782,12 +775,12 @@ window.PORTFOLIO_DATA = {
           eyebrow: "Visualization",
           title: "Dashboard-ready chart stack",
           body:
-            "Recharts is included as the visualization layer for future session summaries, event counts, behavior trends, and playtest reports."
+            "Recharts is included as the visualization layer for session summaries, event counts, behavior trends, and playtest reports."
         }
       ],
       solutions: [
         "Separated project, player, session, and event concepts early so the data layer can scale into a multi-project analytics product.",
-        "Used project-scoped API keys as the future ingestion boundary between instrumented games and the PlaytestIQ dashboard.",
+        "Used project-scoped API keys as the ingestion boundary between instrumented games and the PlaytestIQ dashboard.",
         "Modeled external player and session IDs with project-level uniqueness to avoid collisions across games.",
         "Stored event properties as JSON so the MVP can capture flexible gameplay payloads without requiring a new database column for every design question.",
         "Planned event-name and timestamp indexing so common analytics queries have a clear performance path.",
@@ -797,30 +790,17 @@ window.PORTFOLIO_DATA = {
         "A useful analytics product starts with the event contract, not the chart.",
         "Playtesting tools sit between game development and product thinking: the data only matters if it helps a team make a better next decision.",
         "Flexible telemetry is powerful, but it needs project/session/player structure or it becomes a pile of disconnected facts.",
-        "Showing the project while it is in development makes the architecture visible before the interface is fully polished.",
+        "Showing the project while it is in development makes the architecture visible before the interface is finished.",
         "The next important milestone is turning the schema into an end-to-end loop: send events, store them, query them, and explain them clearly."
       ],
       gallery: [
         {
-          image: "assets/black-placeholder.svg",
-          alt: "Black placeholder reserved for a future PlaytestIQ workflow visual.",
-          eyebrow: "Cover",
-          title: "In-development telemetry workflow",
-          body: "Placeholder slot for a future workflow visual about instrumentation, capture, querying, and interpretation."
-        },
-        {
-          image: "assets/black-placeholder.svg",
-          alt: "Black placeholder reserved for a future PlaytestIQ schema visual.",
-          eyebrow: "Schema",
-          title: "Project, player, session, event model",
-          body: "Placeholder slot for a future schema visual covering Project, Player, Session, and Event entities."
-        },
-        {
-          image: "assets/black-placeholder.svg",
-          alt: "Black placeholder reserved for a future PlaytestIQ development-stack visual.",
-          eyebrow: "Dev stack",
-          title: "Dockerized Postgres and Next app shell",
-          body: "Placeholder slot for a future development-stack visual based on Docker Postgres, Next.js, Prisma, and Recharts."
+          image: "assets/playtestiq/playtestiq-dashboard-cover.png",
+          alt: "PlaytestIQ dashboard screenshot showing event totals, unique players, sessions, and a top-events bar chart.",
+          eyebrow: "Dashboard",
+          title: "First analytics dashboard",
+          body: "The dashboard turns sample playtest telemetry into a quick read on total events, player count, session count, and the most common gameplay events.",
+          fit: "contain"
         }
       ],
       launchNote:
@@ -846,16 +826,16 @@ window.PORTFOLIO_DATA = {
         { label: "Course code kept private", url: "#launch" }
       ],
       summary:
-        "A CSCI 353 networking lab that built a small routed application network in C++, using UTM for the Linux development environment and FileZilla to move code and test artifacts through the class workflow.",
+        "A CSCI 353 networking lab that built a small routed application network in C++, using UTM for the Linux development environment and FileZilla to move code, logs, and test records through the class setup.",
       what:
-        "This Lab was a systems-heavy computer networks project built around multiple C++ node processes running on localhost. Each node started from a config file, opened a TCP listening socket, connected to configured neighbors, exchanged SAYHELLO handshakes, flooded LSUPDATE messages, maintained a live adjacency graph, computed forwarding tables with BFS, and routed UCASTAPP packets across the network. On top of that routed layer, the lab added UDT-style application messages, reliable data transfer with acknowledgements and retransmission, traceroute-style TTL probing, and an echo application. I developed and tested the project inside a UTM-hosted Ubuntu/Linux class environment so the compiler, socket behavior, threading model, and script transcripts matched the grader setup. FileZilla became part of the workflow: I used it to transfer source files, lab data, logs, and run transcripts between macOS and the VM without breaking the course directory structure.",
+        "This lab was a systems-heavy computer networks project built around multiple C++ node processes running on localhost. Each node started from a config file, opened a TCP listening socket, connected to configured neighbors, exchanged SAYHELLO handshakes, flooded LSUPDATE messages, maintained a live adjacency graph, computed forwarding tables with BFS, and routed UCASTAPP packets across the network. On top of that routed layer, the lab added UDT-style application messages, reliable data transfer with acknowledgements and retransmission, traceroute-style TTL probing, and an echo application. I developed and tested the project inside a UTM-hosted Ubuntu/Linux class environment so the compiler, socket behavior, threading model, and script transcripts matched the grader setup. FileZilla became the bridge between macOS and the VM: source files, lab data, logs, and run transcripts moved without breaking the course directory structure.",
       goals: [
         "Build a multi-node network program where each process can act as both a TCP server and a TCP client.",
         "Track active neighbors, disconnected nodes, and topology changes without letting stale graph state pollute routing decisions.",
         "Flood link-state updates through the network while avoiding duplicate message handling and infinite propagation.",
         "Compute deterministic forwarding tables from the live adjacency graph so application packets can route beyond direct neighbors.",
         "Implement reliable application delivery over a simpler UDT-style layer using sequence numbers, ACKs, timers, and retransmission.",
-        "Keep the UTM/FileZilla workflow clean enough that local development, VM testing, and final script evidence stayed reproducible."
+        "Keep the UTM/FileZilla process clean enough that local development, VM testing, and final script records stayed reproducible."
       ],
       constraints: [
         "Socket behavior, compiler flags, and thread timing needed to match the Linux course environment, not just macOS behavior.",
@@ -876,13 +856,13 @@ window.PORTFOLIO_DATA = {
       technical: [
         {
           eyebrow: "Environment",
-          title: "UTM-based Linux workflow",
+          title: "UTM-based Linux setup",
           body: "The project was developed against the course Linux target instead of relying on macOS socket behavior. UTM gave me a contained Ubuntu-style environment for compilation, terminal scripts, and multi-process testing."
         },
         {
           eyebrow: "Transfer",
           title: "FileZilla bridge",
-          body: "FileZilla handled the practical handoff between my local machine and the VM: moving edited source, config files, generated logs, and final transcript artifacts without manually recreating folders."
+          body: "FileZilla handled the practical handoff between my local machine and the VM: moving edited source, config files, generated logs, and final transcripts without manually recreating folders."
         },
         {
           eyebrow: "Network layer",
@@ -907,7 +887,7 @@ window.PORTFOLIO_DATA = {
       ],
       demo: {
         title: "Terminal demo",
-        body: "A safe browser-side replay of the Lab workflow. It uses sanitized transcript-style output, not the private course source or a live VM, so visitors can still understand the routing behavior without needing UTM running.",
+        body: "A safe browser-side replay of the lab process. It uses sanitized transcript-style output, not the private course source or a live VM, so visitors can still understand the routing behavior without needing UTM running.",
         prompt: ":12000>",
         topology: [
           { node: ":12000", neighbors: [":12002"] },
@@ -983,7 +963,7 @@ window.PORTFOLIO_DATA = {
         "Pruned unreachable adjacency entries before printing netgraph output or computing forwarding tables, which kept routing based on the current partition.",
         "Used explicit command output as a debugging interface: neighbors for direct links, netgraph for topology, forwarding for routes, and traceroute for hop-by-hop reachability.",
         "Built reliable delivery on top of the routed message layer by pairing data frames with sequence-aware ACKs and timeout retries.",
-        "Used the UTM and FileZilla loop as infrastructure, not busywork: edit locally, transfer intentionally, compile in Linux, run scripts, collect artifacts, repeat."
+        "Used the UTM and FileZilla loop as infrastructure, not busywork: edit locally, transfer intentionally, compile in Linux, run scripts, collect records, repeat."
       ],
       takeaways: [
         "Networking projects reward boring precision: one bad content length, stale route, or missing lock can make a distributed system look haunted.",
@@ -995,33 +975,19 @@ window.PORTFOLIO_DATA = {
           image: "assets/web-server-client/routing-lab-cover.jpg",
           alt: "Screenshot of the Reliable Routing Lab running in a Linux VM with C++ source, build output, and terminal network commands.",
           eyebrow: "Cover",
-          title: "VM workflow and routing output",
-          body: "The cover now uses the actual VM workflow screenshot, showing source code, make output, and multiple node terminals running netgraph and forwarding commands."
-        },
-        {
-          image: "assets/black-placeholder.svg",
-          alt: "Black placeholder reserved for a future three-node topology visual.",
-          eyebrow: "Topology",
-          title: "Three-node link-state graph",
-          body: "Placeholder slot for a future topology visual showing netgraph and forwarding state."
-        },
-        {
-          image: "assets/black-placeholder.svg",
-          alt: "Black placeholder reserved for a future reliable data transfer transcript visual.",
-          eyebrow: "RDT proof",
-          title: "ACK and sequence transcript",
-          body: "Placeholder slot for a future transcript visual showing routed application bytes and reliable acknowledgements."
+          title: "VM setup and routing output",
+          body: "The cover uses the actual VM screenshot, showing source code, make output, and multiple node terminals running netgraph and forwarding commands."
         }
       ],
       launchNote:
-        "The terminal demo above uses sanitized replay output so the routing workflow is demoable without publishing USC CSCI 353 assignment source. The source is intentionally not linked because the course files prohibit public distribution.",
+        "The terminal demo above uses sanitized replay output so the routing behavior is understandable without publishing USC CSCI 353 assignment source. The source is intentionally not linked because the course files prohibit public distribution.",
       cardNote: "C++ · TCP sockets · UTM · FileZilla"
     },
     {
       slug: "glorgos-microplastics-mine",
       title: "Glorgo’s Microplastics Mine",
       category: "game",
-      role: "Quality Assurance (QA) Lead",
+      role: "Quality Assurance (QA) Engineer Lead",
       year: "2025–2026",
       type: "USC Games AGP Capstone",
       status: "Released on Steam",
@@ -1033,41 +999,41 @@ window.PORTFOLIO_DATA = {
         { label: "Steam page", url: "https://store.steampowered.com/app/4246790/Glorgos_Microplastics_Mine/" },
         { label: "Development media", url: "#media" },
         { label: "QA tooling screenshots", url: "#screens" },
-        { label: "QA evidence", url: "#screens" }
+        { label: "QA records", url: "#screens" }
       ],
       summary:
         "A year-long USC Games Advanced Game Project where I led QA for a nearly 80-person team, built the project’s Discord bug bot, and helped engineering keep the Steam release stable.",
       what:
-        "Glorgo’s Microplastics Mine is a Y2K-flavored incremental resource management game about overseeing an alien mining operation, hiring expendable miners, upgrading production, and surviving the strange plasticbeasts living below the quarry. My role was Quality Assurance (QA) Lead: I managed QA workflows, kept bug reporting actionable, took notes during bi-weekly faculty reviews, presented with the team at the USC Games Expo 2026, and worked directly with engineering and usability to turn player friction into fixes.",
+        "Glorgo’s Microplastics Mine is a Y2K-flavored incremental resource management game about overseeing an alien mining operation, hiring expendable miners, upgrading production, and surviving the strange plasticbeasts living below the quarry. My role was Quality Assurance (QA) Lead: I managed the QA process, kept bug reporting actionable, took notes during bi-weekly faculty reviews, presented with the team at the USC Games Expo 2026, and worked directly with engineering and usability to turn player friction into fixes.",
       goals: [
-        "Keep a year-long AGP capstone build stable and playable across weekly tasks, milestone reviews, and public-facing showcases.",
+        "Keep a year-long AGP capstone build stable and playable across weekly tasks, milestone reviews, and public milestones.",
         "Lead a small QA crew so bugs, repro steps, assets, and fix statuses stayed current instead of disappearing into chat history.",
         "Lower bug-reporting friction by replacing a tedious Google Form flow with a Discord-native reporting system.",
         "Support engineering directly by fixing or root-causing roughly 15–25% of outstanding bugs each week.",
-        "Translate faculty, industry, and playtest feedback into concrete production priorities.",
+        "Translate faculty, industry, and playtest feedback into specific production priorities.",
         "Make QA serve both player clarity and engineering velocity instead of living as a separate checklist."
       ],
       constraints: [
-        "A large multidisciplinary team meant QA had to make information legible for people with different schedules, priorities, and disciplines.",
+        "A large multidisciplinary team meant QA had to make information readable for people with different schedules, priorities, and disciplines.",
         "Discord was the team’s primary communication space, while the original bug form added too much friction for quick reports.",
         "Bug reports needed enough context for engineers to act: build version, reproduction steps, expected behavior, actual behavior, and attached evidence.",
-        "Faculty and industry feedback arrived on a bi-weekly rhythm, so notes and priorities had to be translated into concrete next steps quickly.",
+        "Faculty and industry feedback arrived on a bi-weekly rhythm, so notes and priorities had to become next steps quickly.",
         "Rapidly changing builds required QA to separate old issues, regressions, and new bugs without slowing production.",
         "The game had to remain stable enough for milestone reviews, Steam release preparation, and USC Games Expo presentation."
       ],
       process: [
-        { title: "Set the QA pipeline", body: "Defined the build intake, smoke testing, regression testing, focus testing, bug reporting, and greenlight loop with engineering." },
+        { title: "Set the QA rhythm", body: "Defined the build intake, smoke testing, regression testing, focus testing, bug reporting, and greenlight loop with engineering." },
         { title: "Lead weekly QA work", body: "Assigned and tracked QA tasks, helped crew members log clear issues, and kept the bug sheet updated as fixes landed." },
         { title: "Build the Discord bot", body: "Developed a Python bot in a virtual environment, hosted it on Google Cloud, and connected it to Google Sheets through Apps Script." },
-        { title: "Partner with leads", body: "Worked with the usability lead on playmetrics and the engineering lead on bug fixing, root causes, and general implementation support." },
+        { title: "Partner with leads", body: "Worked with the usability lead on playmetrics and the engineering lead on bug fixing, root causes, and implementation help." },
         { title: "Track review notes", body: "Recorded bi-weekly feedback from USC Games faculty and visiting professionals so critiques could become follow-up tasks." },
         { title: "Validate fixes", body: "Retested resolved issues, watched for regressions, and helped decide when builds were stable enough to move forward." }
       ],
       solutions: [
-        "Replaced the original Google Form-only workflow with Discord commands so bug reporting happened where the team was already communicating.",
+        "Replaced the original Google Form-only process with Discord commands so bug reporting happened where the team was already communicating.",
         "Used !bug to log new issues, !bugfix to mark fixes, and !buglist to surface outstanding work without forcing people to open a separate tracker.",
         "Connected Discord, Google Sheets, and Apps Script so the bug list stayed searchable while still allowing extra metadata to be added later.",
-        "Turned QA into an engineering support layer by reproducing bugs, attaching assets, finding root causes, and personally fixing a meaningful share of weekly issues.",
+        "Made QA a stronger engineering partner by reproducing bugs, attaching assets, finding root causes, and personally fixing a meaningful share of weekly issues.",
         "Captured faculty and industry review notes so feedback from USC Games reviews could become prioritized production tasks.",
         "Maintained the tracker as production memory: what broke, who saw it, what evidence existed, and when it was fixed."
       ],
@@ -1083,12 +1049,12 @@ window.PORTFOLIO_DATA = {
               "The public trailer shows the shipped Steam build's resource loop, alien workers, cave escalation, and Y2K management-game personality."
           },
           {
-            title: "Lil guys in motion",
+            title: "Early development clip",
             eyebrow: "Development clip",
             src: "assets/glorgo/lilguys.mp4",
             poster: "assets/glorgo/gmm-cover.jpg",
             body:
-              "A short development clip showing the small worker characters that made the project feel silly, readable, and alive during production."
+              "A short development clip showing the core gameplay functionality."
           }
         ]
       },
@@ -1099,11 +1065,11 @@ window.PORTFOLIO_DATA = {
           alt: "Glorgo’s Microplastics Mine team photo at the USC Games Expo 2026.",
           eyebrow: "USC Games Expo 2026",
           title: "Presented with the team",
-          body: "The project shipped through the year-long AGP pipeline and was shown publicly at the annual USC Games Expo.",
+          body: "The project moved through the year-long AGP process and was shown publicly at the annual USC Games Expo.",
           position: "center",
           fit: "cover",
           details: [
-            "Public showcase moment for the capstone team.",
+            "Public release moment for the capstone team.",
             "Helped communicate the project beyond internal faculty reviews."
           ]
         },
@@ -1116,7 +1082,7 @@ window.PORTFOLIO_DATA = {
           position: "top center",
           fit: "contain",
           details: [
-            "Connected to the Discord bot workflow through Google Sheets and Apps Script.",
+            "Connected to the Discord bot process through Google Sheets and Apps Script.",
             "Made bug status easier to audit across milestone pushes."
           ]
         },
@@ -1181,7 +1147,7 @@ window.PORTFOLIO_DATA = {
           alt: "Glorgo's Microplastics Mine team presenting at the USC Games Expo.",
           eyebrow: "Showcase",
           title: "USC Games Expo 2026",
-          body: "A public-facing production moment from the capstone's release and showcase cycle.",
+          body: "A public-facing production moment from the capstone's release cycle.",
           position: "center"
         },
         {
@@ -1189,7 +1155,7 @@ window.PORTFOLIO_DATA = {
           alt: "Glorgo bug tracker spreadsheet with bug IDs, reports, and fix statuses.",
           eyebrow: "QA tracker",
           title: "Spring bug tracker",
-          body: "The spreadsheet proof shows the structured QA workflow behind the Discord bot and milestone fixes.",
+          body: "The spreadsheet shows the QA structure behind the Discord bot and milestone fixes.",
           fit: "contain"
         },
         {
@@ -1208,13 +1174,6 @@ window.PORTFOLIO_DATA = {
           body: "The bug-list view made open QA work visible without leaving Discord.",
           fit: "contain",
           position: "top center"
-        },
-        {
-          image: "assets/black-placeholder.svg",
-          alt: "Black placeholder reserved for a future Glorgo QA workflow visual.",
-          eyebrow: "Process board",
-          title: "QA reporting to verification loop",
-          body: "Placeholder slot for a future QA workflow visual tying the public release, bot commands, tracker work, and verification together."
         }
       ],
       launchNote:
@@ -1231,17 +1190,17 @@ window.PORTFOLIO_DATA = {
       status: "Open Alpha cohort project",
       glyph: "ᜋᜋᜑᜒᜃ",
       color: "clay",
-      coverImage: "assets/black-placeholder.svg",
-      coverAlt: "Black placeholder reserved for a future Neuromancer cover image.",
+      coverImage: "assets/neuromancer/neuromancer-cover.png",
+      coverAlt: "Neuromancer cover art with a moonlit sky, green magic, wooden title sign, and bubbling cauldron.",
       links: [
         { label: "Watch trailer", url: "#media" },
         { label: "View systems", url: "#technical" },
-        { label: "Visual proof", url: "#screens" }
+        { label: "Selected media", url: "#screens" }
       ],
       summary:
         "A Unity narrative management game about an evil wizard forced into morale counseling, built around timed days, dialogue choices, potion shortcuts, XP, and branching endings.",
       what:
-        "Neuromancer is an Open Alpha cohort game where the player is an evil wizard whose defeated minions demand moral support before they will keep fighting. The core loop sends a client into the wizard’s office, asks the player to read their profile and dialogue cues, choose between book-based therapy responses or potion-making, then feeds the outcome into XP, morale, day progression, and ending state. My programming work focused on cohort-scale Unity production: planning modular systems, supporting team workflow, and tying together presentation flows like the main menu, main game, settings, credits, and scene navigation.",
+        "Neuromancer is an Open Alpha cohort game where the player is an evil wizard whose defeated minions need morale counseling before they will keep fighting. The core loop sends a client into the wizard’s office, asks the player to read their profile and dialogue cues, choose between book-based therapy responses or potion-making, then feeds the outcome into XP, morale, day progression, and ending state. My programming work focused on cohort-scale Unity production: planning modular systems, helping the team stay coordinated, and tying together presentation flows like the main menu, main game, settings, credits, and scene navigation.",
       goals: [
         "Turn a funny premise into a readable management loop: intake, diagnosis, response, result, and day-end summary.",
         "Keep the Unity architecture modular enough for a large student cohort to build UI, dialogue, audio, potions, XP, and endings in parallel.",
@@ -1257,7 +1216,7 @@ window.PORTFOLIO_DATA = {
         "The end-of-semester crunch pass had to prioritize scene integration, feature completion, bug fixing, and presentable trailer footage."
       ],
       process: [
-        { title: "Set up the cohort workflow", body: "Helped document development setup, Unity version expectations, branch usage, task demos, and pull request review flow for programmers and mentors." },
+        { title: "Set up the cohort process", body: "Helped document development setup, Unity version expectations, branch usage, task demos, and pull request review flow for programmers and mentors." },
         { title: "Plan modular systems", body: "Mapped the programming surface around save/settings, main menu, pause, dialogue, audio, NPC prefabs, UI interactions, potion-making, XP, and endings." },
         { title: "Tie scenes together", body: "Worked on connecting the main menu, main game, settings, credits, and escape/back navigation so the project felt like one playable build." },
         { title: "Coordinate integration", body: "Tracked crunch tasks for merging the potion UI, therapy book, dialogue scene, main scene, assets, sound, fonts, and ending logic." },
@@ -1284,7 +1243,7 @@ window.PORTFOLIO_DATA = {
         {
           eyebrow: "Progression",
           title: "XP, morale, and endings",
-          body: "Successful sessions fed XP and morale, which supported book upgrades, day results, and three ending branches."
+          body: "Successful sessions fed XP and morale, driving book upgrades, day results, and three ending branches."
         },
         {
           eyebrow: "Scheduling",
@@ -1293,8 +1252,8 @@ window.PORTFOLIO_DATA = {
         },
         {
           eyebrow: "Production",
-          title: "Task-demo workflow",
-          body: "Programmers were expected to record short demos, attach them to pull requests, and document anything future teams needed to know."
+          title: "Task demos",
+          body: "Programmers were expected to record short demos, attach them to pull requests, and document anything later contributors needed to know."
         }
       ],
       media: {
@@ -1310,53 +1269,11 @@ window.PORTFOLIO_DATA = {
           }
         ]
       },
-      screensTitle: "Art + presentation",
-      screens: [
-        {
-          image: "assets/neuromancer/neuromancer-room.png",
-          alt: "Neuromancer wizard office background with warm orange light, shelf props, cauldron, broom, and window.",
-          eyebrow: "Main environment",
-          title: "Wizard office as interface stage",
-          body: "The static office background gives the management loop a clear stage for clients, desk UI, potion tools, and day progression.",
-          position: "center",
-          fit: "cover",
-          details: [
-            "Built for a single-screen workflow where most interactions happen at the desk.",
-            "Readable background space leaves room for layered UI and character assets."
-          ]
-        },
-        {
-          image: "assets/neuromancer/neuromancer-title.png",
-          alt: "Neuromancer title logo on a wooden sign.",
-          eyebrow: "Title treatment",
-          title: "Hand-drawn fantasy title",
-          body: "The title asset set the project’s playful fantasy tone before the player entered the counseling loop.",
-          position: "top center",
-          fit: "contain",
-          details: [
-            "Used in the menu flow that led into the main game.",
-            "Kept the project identity visible across trailer and presentation material."
-          ]
-        },
-        {
-          image: "assets/neuromancer/neuromancer-good-ending.png",
-          alt: "Comic-style good ending cutscene for Neuromancer showing fantasy characters gathered in multiple panels.",
-          eyebrow: "Ending art",
-          title: "Branching outcome proof",
-          body: "Ending stills gave the XP and morale systems a visible payoff, with different outcomes planned around player performance.",
-          position: "center",
-          fit: "contain",
-          details: [
-            "One of three ending branches planned for the final build.",
-            "Connected systems work to narrative feedback at the end of the run."
-          ]
-        }
-      ],
       solutions: [
         "Framed the game loop around clear state transitions: client enters, player reads cues, chooses a therapy or potion response, outcome updates XP/morale, and the day advances.",
         "Separated recurring character moments from the timed generic-client loop so important story scenes could teach mechanics without fighting the timer.",
         "Documented programming setup and contribution steps so newer Unity programmers had a safer path from onboarding to pull request.",
-        "Converted design needs into concrete implementation tasks for profile cards, sequencing, UI integration, potion rules, cutscenes, sound, and end-of-day results.",
+        "Converted design needs into implementation tasks for profile cards, sequencing, UI integration, potion rules, cutscenes, sound, and end-of-day results.",
         "Prioritized scene and UI integration late in production so separate feature work could become one coherent build."
       ],
       takeaways: [
@@ -1367,11 +1284,11 @@ window.PORTFOLIO_DATA = {
       ],
       gallery: [
         {
-          image: "assets/black-placeholder.svg",
-          alt: "Black placeholder reserved for a future Neuromancer title-screen cover.",
+          image: "assets/neuromancer/neuromancer-cover.png",
+          alt: "Neuromancer cover art with a moonlit sky, green magic, wooden title sign, and bubbling cauldron.",
           eyebrow: "Cover",
           title: "Title screen cover",
-          body: "Placeholder slot for a future title-screen cover from the playable build."
+          body: "The cover art frames the game's playful fantasy tone with the wooden title sign, moonlit backdrop, and magic cauldron."
         },
         {
           image: "assets/neuromancer/neuromancer-room.png",
@@ -1381,24 +1298,10 @@ window.PORTFOLIO_DATA = {
           body: "The office background anchors the client, profile, book, potion, timer, and XP systems."
         },
         {
-          image: "assets/black-placeholder.svg",
-          alt: "Black placeholder reserved for a future Neuromancer UI and systems asset visual.",
-          eyebrow: "Asset board",
-          title: "UI and system assets",
-          body: "Placeholder slot for future media showing the therapy book, profile, timer, cauldron, and potion pieces."
-        },
-        {
-          image: "assets/black-placeholder.svg",
-          alt: "Black placeholder reserved for a future Neuromancer play-loop visual.",
-          eyebrow: "System flow",
-          title: "Therapy, potion, and outcome loop",
-          body: "Placeholder slot for a future systems visual from client entry to day resolution."
-        },
-        {
           image: "assets/neuromancer/neuromancer-good-ending.png",
           alt: "Neuromancer good ending cutscene with multiple fantasy characters in comic panels.",
           eyebrow: "Outcome",
-          title: "Branching ending proof",
+          title: "Branching ending",
           body: "The ending still shows how XP and morale outcomes fed into visible narrative payoff.",
           fit: "contain"
         },
@@ -1437,13 +1340,13 @@ window.PORTFOLIO_DATA = {
         "Scythe of Sidereal is a CTIN 489 game built around fast wave combat, supernatural atmosphere, and a weapon system that keeps the player moving. Players fight through escalating cursed spaces, use a scythe that can swing or be thrown, rely on a faster fallback sword while the scythe is away, and work toward a beam attack unlocked through kills.",
       goals: [
         "Keep players cautious, mobile, and on their toes against enemies and the environment.",
-        "Make combat feel simple to learn but versatile enough to support mastery.",
+        "Make combat simple to learn but versatile enough to reward mastery.",
         "Create a linear difficulty curve across waves so wins feel earned without becoming punishing.",
-        "Use enemy variety, boss encounters, cutscenes, and audio to support the supernatural fantasy."
+        "Use enemy variety, boss encounters, cutscenes, and audio to reinforce the supernatural fantasy."
       ],
       constraints: [
         "A two-person CS Games team had to build gameplay, art, UI, animation, and production systems while learning Unity more deeply.",
-        "The original scope included ambitious progression, bosses, and polish goals that needed to be cut or prioritized late in production.",
+        "The original scope included ambitious progression, bosses, and finishing goals that needed to be cut or prioritized late in production.",
         "Remote audio collaboration with Berklee required clearer updates, asset tracking, and implementation notes.",
         "Playtest data showed strong combat enjoyment but weaker visual clarity, aiming controls, and sprite consistency."
       ],
@@ -1457,13 +1360,13 @@ window.PORTFOLIO_DATA = {
         "Created player animation states for idle, running, rolling, and floating so the character had readable motion across combat and traversal.",
         "Implemented weapon affordances around the scythe, fallback sword, and beam so the player keeps agency even when their main weapon is thrown.",
         "Used playtest findings from 16 respondents: gameplay enjoyment averaged 4.15/5, combat enjoyment 4.00/5, and enemy-defeat capability 4.29/5.",
-        "Translated weaker signals around aiming controls, graphics consistency, visual cues, and enemy feedback into the final polish plan.",
+        "Translated weaker signals around aiming controls, graphics consistency, visual cues, and enemy feedback into the final refinement plan.",
         "Coordinated audio direction for eerie exploration, more intense combat, scythe swings, throws, damage, dash, doors, UI, and cutscene moments."
       ],
       media: {
         trailer: {
           title: "Release candidate trailer",
-          eyebrow: "Trailer / build proof",
+          eyebrow: "Trailer / build",
           src: "assets/scythe-trailer.mp4",
           poster: "assets/scythe-title.png",
           body:
@@ -1486,7 +1389,7 @@ window.PORTFOLIO_DATA = {
             title: "Roll",
             src: "assets/scythe-roll.gif",
             alt: "Pixel animation of Scylax rolling.",
-            body: "Evasive state supporting wave survival and repositioning."
+            body: "Evasive state for wave survival and repositioning."
           },
           {
             title: "Float",
@@ -1497,7 +1400,7 @@ window.PORTFOLIO_DATA = {
         ]
       },
       takeaways: [
-        "Combat polish depends on feedback as much as features: audio, hit response, screen feedback, and visual clarity determine whether attacks feel powerful.",
+        "Combat only works when feedback matches the feature set: audio, hit response, screen feedback, and visual clarity determine whether attacks feel powerful.",
         "Playtests with people outside the immediate dev circle reveal where controls and readability fail faster than internal testing does.",
         "The project became playable from start to end, but it also taught the practical lesson of setting realistic scope before production debt becomes the design."
       ],
@@ -1507,7 +1410,7 @@ window.PORTFOLIO_DATA = {
           alt: "Landscape title art for Scythe of Sidereal.",
           eyebrow: "Cover",
           title: "Release-candidate title art",
-          body: "The cover uses the actual game title presentation instead of a text-only proof card."
+          body: "The cover uses the actual game title presentation instead of a generic title card."
         },
         {
           image: "assets/scythe/scythe-animation-sheet.png",
@@ -1515,13 +1418,6 @@ window.PORTFOLIO_DATA = {
           eyebrow: "Sprites",
           title: "Player animation set",
           body: "Original sprite frames show the animation work behind readable combat motion."
-        },
-        {
-          image: "assets/black-placeholder.svg",
-          alt: "Black placeholder reserved for a future Scythe of Sidereal combat-flow visual.",
-          eyebrow: "Gameplay flow",
-          title: "Combat system process",
-          body: "Placeholder slot for a future combat-flow visual connecting animation, weapon states, fallback behavior, and playtest tuning."
         },
         {
           image: "assets/scythe-title.png",
@@ -1535,7 +1431,7 @@ window.PORTFOLIO_DATA = {
           alt: "Scylax run animation from Scythe of Sidereal.",
           eyebrow: "Animation",
           title: "Run cycle in motion",
-          body: "The GIF shows the character motion that supported movement readability.",
+          body: "The GIF shows the character motion behind the movement readability.",
           fit: "contain"
         },
         {
@@ -1543,12 +1439,12 @@ window.PORTFOLIO_DATA = {
           alt: "Scylax roll animation from Scythe of Sidereal.",
           eyebrow: "Animation",
           title: "Evasive roll state",
-          body: "The roll state supported wave-survival pacing and combat repositioning.",
+          body: "The roll state shaped wave-survival pacing and combat repositioning.",
           fit: "contain"
         }
       ],
       launchNote:
-        "The current build is available on itch.io. The trailer and animation studies above document the release candidate and character work that supported the final gameplay feel.",
+        "The current build is available on itch.io. The trailer and animation studies above document the release candidate and the character work behind the final gameplay feel.",
       cardNote: "Unity · game development · combat · playtesting"
     },
     {
@@ -1564,7 +1460,7 @@ window.PORTFOLIO_DATA = {
       coverImage: "assets/cafe-noir/cafe-noir-cover.png",
       coverAlt: "Pixel-art title screen for Cafe Noir with Start, How to Play, and Settings buttons.",
       links: [
-        { label: "Feature proof", url: "#technical" },
+        { label: "Feature notes", url: "#technical" },
         { label: "Interface screens", url: "#screens" },
         { label: "Process", url: "#process" }
       ],
@@ -1578,15 +1474,15 @@ window.PORTFOLIO_DATA = {
         "Let dialogue change based on the current day, night phase, and selected mystery version.",
         "Support both keyboard and virtual joystick input so the game could be tested across desktop-style and mobile-style controls.",
         "Create a full loop from main menu to investigation to accusation and ending cutscene.",
-        "Keep the final class-project scope polished enough to feel complete without overbuilding the mystery systems."
+        "Keep the final class-project scope finished enough to feel complete without overbuilding the mystery systems."
       ],
       constraints: [
         "The project was a solo class final, so systems, UI, dialogue, scene flow, and presentation had to stay scoped enough to finish.",
         "Dialogue had to remain organized across multiple NPCs, days, nights, win states, lose states, and mystery versions.",
         "Scene transitions needed to preserve player position, camera bounds, audio state, and interior/exterior context.",
-        "The visual style depended on pixel-art readability, so UI, movement, interaction prompts, and time state had to stay legible.",
+        "The visual style depended on pixel-art readability, so UI, movement, interaction prompts, and time state had to stay clear.",
         "The culprit-version framework had to be documented clearly even while the final build locked to one mystery route.",
-        "The portfolio proof had to use available build screenshots and system boards because the class build does not yet have a full gameplay capture set."
+        "The portfolio page had to use available build screenshots and system boards because the class build does not yet have a full gameplay capture set."
       ],
       process: [
         {
@@ -1614,37 +1510,37 @@ window.PORTFOLIO_DATA = {
           body: "Built main menu, settings, pause, audio volume, SFX volume, quality controls, screen fades, and music crossfades for a finished class-project wrapper."
         }
       ],
-      technicalTitle: "Feature proof map",
+      technicalTitle: "Feature map",
       technical: [
         {
-          eyebrow: "Gameplay proof",
+          eyebrow: "Gameplay",
           title: "Town exploration",
           body: "The overworld screenshots show the cafe exterior, clock HUD, virtual joystick, and interaction button that define exploration."
         },
         {
-          eyebrow: "Dialogue proof",
+          eyebrow: "Dialogue",
           title: "NPC interrogation",
           body: "The dialogue-system board documents how NPC lines are organized by suspect version, day/night state, and outcome state."
         },
         {
-          eyebrow: "State proof",
+          eyebrow: "State",
           title: "Day/night investigation",
-          body: "The systems proof covers the morning-to-night shift, overlays, time pacing, and music crossfades that drive the investigation mood."
+          body: "The systems board covers the morning-to-night shift, overlays, time pacing, and music crossfades that drive the investigation mood."
         },
         {
-          eyebrow: "Scene proof",
+          eyebrow: "Scenes",
           title: "Door + interior transitions",
           body: "The technical notes connect doors, spawn points, fades, camera bounds, SFX, and interior/exterior music transitions."
         },
         {
-          eyebrow: "Ending proof",
+          eyebrow: "Endings",
           title: "Accusation sequence",
           body: "The accusation flow is represented in the system board: selecting a suspect resolves into win or lose cutscenes."
         },
         {
-          eyebrow: "UI proof",
+          eyebrow: "UI",
           title: "Menus + settings",
-          body: "The title screenshot and cover art show the completed menu shell, with supporting settings and pause controllers described in the build notes."
+          body: "The title screenshot and cover art show the completed menu shell, with settings and pause controllers described in the build notes."
         }
       ],
       screensTitle: "Current screenshots",
@@ -1685,10 +1581,10 @@ window.PORTFOLIO_DATA = {
         "Created menu and settings controllers for start, how-to, settings, pause, audio, and quality flows so the game had a complete class-final presentation shell."
       ],
       takeaways: [
-        "Mystery games are mostly state management: the hard part is keeping clues, suspects, days, and outcomes legible.",
+        "Mystery games are mostly state management: the hard part is keeping clues, suspects, days, and outcomes understandable.",
         "Dialogue organization matters early. Once NPCs have different lines by version and time of day, naming and folder structure become part of the design.",
         "Small quality-of-life systems like fades, audio crossfades, settings, and interaction prompts make a class project feel far more complete.",
-        "The current proof set works because it combines actual screenshots with system boards that explain the build behavior behind still images.",
+        "The current media set works because it combines actual screenshots with system boards that explain the build behavior behind still images.",
         "Building solo made scope control just as important as code. Every feature had to earn its place in the final loop.",
         "Cafe Noir helped connect systems programming, UI flow, and narrative design inside one playable Unity project."
       ],
@@ -1704,27 +1600,13 @@ window.PORTFOLIO_DATA = {
           image: "assets/cafe-noir/cafe-noir-overworld.png",
           alt: "Cafe Noir overworld screenshot with player, cafe exterior, day/time HUD, joystick, and interact button.",
           eyebrow: "Game screen",
-          title: "Town exploration proof",
+          title: "Town exploration",
           body: "The overworld screenshot shows movement UI, time state, and the cafe-centered map.",
           position: "center"
-        },
-        {
-          image: "assets/black-placeholder.svg",
-          alt: "Black placeholder reserved for a future Cafe Noir screenshot-board visual.",
-          eyebrow: "Screenshot board",
-          title: "Build screens collected",
-          body: "Placeholder slot for a future collected screenshot visual."
-        },
-        {
-          image: "assets/black-placeholder.svg",
-          alt: "Black placeholder reserved for a future Cafe Noir systems-flow visual.",
-          eyebrow: "System board",
-          title: "Dialogue, time, and ending flow",
-          body: "Placeholder slot for a future systems-flow visual covering exploration, dialogue, time progression, and accusation resolution."
         }
       ],
       launchNote:
-        "Built as an individual TAC 382 Unity final project. The feature proof above combines current screenshots with system boards that document exploration, dialogue, day/night state, transitions, menus, and accusation endings.",
+        "Built as an individual TAC 382 Unity final project. The feature map above combines current screenshots with system boards that document exploration, dialogue, day/night state, transitions, menus, and accusation endings.",
       cardNote: "Unity · game development · mystery RPG"
     },
     {
@@ -1742,7 +1624,7 @@ window.PORTFOLIO_DATA = {
       links: [
         { label: "Systems demo", url: "#media" },
         { label: "RAM + rhythm systems", url: "#technical" },
-        { label: "Visual proof", url: "#screens" }
+        { label: "Selected media", url: "#screens" }
       ],
       summary:
         "A frantic desktop-UI minigame game where the player races to unsubmit an accidental art portfolio upload while popups, RAM pressure, and browser minigames spiral out of control.",
@@ -1767,7 +1649,7 @@ window.PORTFOLIO_DATA = {
         { title: "Wire RAM outcomes", body: "Helped connect minigame completion and failure states to RAM behavior so the pressure meter changed as players survived or slipped." },
         { title: "Implement rhythm timing", body: "Worked on the cookie rhythm game’s elapsed-time and target-time logic so cookies could be judged by how close the click was to the beat." },
         { title: "Support minigame modularity", body: "Helped with minigame systems that needed reusable wrappers, especially for swapping CAPTCHA puzzle content and keeping scenes testable." },
-        { title: "Fix late-production friction", body: "Handled cleanup tasks such as retry-flow bugs, find-assistant feedback text, and credit-scene polish during the refinement pass." }
+        { title: "Fix late-production friction", body: "Handled cleanup tasks such as retry-flow bugs, find-assistant feedback text, and credit-scene cleanup during the refinement pass." }
       ],
       technicalTitle: "RAM + minigame systems",
       technical: [
@@ -1834,7 +1716,7 @@ window.PORTFOLIO_DATA = {
           position: "center",
           fit: "cover",
           details: [
-            "Old-computer presentation supports the popup and RAM mechanics.",
+            "Old-computer presentation reinforces the popup and RAM mechanics.",
             "The portfolio deadline is visible in the desk scene."
           ]
         },
@@ -1896,7 +1778,7 @@ window.PORTFOLIO_DATA = {
         "Worked on rhythm-game timing so cookies had explicit target moments and clicks could be judged by beat accuracy.",
         "Supported the main-game wrapper where minigames run inside a desktop frame and feed results back into time, RAM, and taskbar progress.",
         "Helped make minigames easier to swap and test by contributing to generalized puzzle/minigame structures.",
-        "Used late-stage bug fixes and polish work to keep the final sequence of minigames understandable under pressure."
+        "Used late-stage bug fixes and refinement work to keep the final sequence of minigames understandable under pressure."
       ],
       takeaways: [
         "A good global pressure system has to be touched by many small interactions, but those interactions need one clear contract.",
@@ -1925,7 +1807,7 @@ window.PORTFOLIO_DATA = {
           alt: "Open Your Browser cookie rhythm game background.",
           eyebrow: "Minigame",
           title: "Rhythm minigame background",
-          body: "The rhythm screen assets support the beat-timed cookie click system.",
+          body: "The rhythm screen assets frame the beat-timed cookie click system.",
           fit: "contain"
         },
         {
@@ -1935,20 +1817,6 @@ window.PORTFOLIO_DATA = {
           title: "RAM warning popup",
           body: "Memory pressure becomes visible through warnings and crash-state pressure.",
           fit: "contain"
-        },
-        {
-          image: "assets/black-placeholder.svg",
-          alt: "Black placeholder reserved for a future Open Your Browser minigame asset visual.",
-          eyebrow: "Asset board",
-          title: "Minigame asset proof",
-          body: "Placeholder slot for future media showing the desktop wrapper, cookie rhythm, RAM warning, CAPTCHA, and final boss assets."
-        },
-        {
-          image: "assets/black-placeholder.svg",
-          alt: "Black placeholder reserved for a future Open Your Browser RAM and rhythm-flow visual.",
-          eyebrow: "Process board",
-          title: "RAM and rhythm flow",
-          body: "Placeholder slot for a future flow visual showing how RAM pressure, minigame scenes, beat timing, and outcomes feed back into the main loop."
         }
       ],
       launchNote:
@@ -1971,7 +1839,7 @@ window.PORTFOLIO_DATA = {
         { label: "Play on itch.io", url: "https://ibrower.itch.io/earthline-protocol" },
         { label: "Tower defense design PDF", url: "assets/earthline-protocol/tower-defense-design-document.pdf" },
         { label: "IndieCade jam PDF", url: "assets/earthline-protocol/indiecade-game-jam.pdf" },
-        { label: "Visual proof", url: "#screens" },
+        { label: "Selected media", url: "#screens" },
         { label: "Process", url: "#process" }
       ],
       summary:
@@ -2059,7 +1927,7 @@ window.PORTFOLIO_DATA = {
           alt: "Earthline Protocol build menu UI background with square slots.",
           eyebrow: "UI",
           title: "Build menu panel",
-          body: "The build menu frame supports tower placement decisions during the wave-defense loop.",
+          body: "The build menu frame gives tower placement decisions a clear home during the wave-defense loop.",
           fit: "contain"
         },
         {
@@ -2075,7 +1943,7 @@ window.PORTFOLIO_DATA = {
           alt: "Earthline Protocol wave counter UI frame.",
           eyebrow: "UI",
           title: "Wave counter",
-          body: "The wave counter supports the round structure and helps players read progression at a glance.",
+          body: "The wave counter anchors the round structure and helps players read progression at a glance.",
           fit: "contain"
         }
       ],
@@ -2101,7 +1969,7 @@ window.PORTFOLIO_DATA = {
           alt: "Animated Flying Planter tower sprite from Earthline Protocol.",
           eyebrow: "Tower animation",
           title: "Flying Planter",
-          body: "The Flying Planter sprite uses motion to distinguish an aerial/supportive tower role.",
+          body: "The Flying Planter sprite uses motion to distinguish an aerial utility role.",
           fit: "contain"
         },
         {
@@ -2117,7 +1985,7 @@ window.PORTFOLIO_DATA = {
           alt: "Animated Saltwater Purifier tower sprite from Earthline Protocol.",
           eyebrow: "Tower animation",
           title: "Saltwater Purifier",
-          body: "The Saltwater Purifier animation supports the game's climate-solution tower set.",
+          body: "The Saltwater Purifier animation adds another climate-solution role to the tower set.",
           fit: "contain"
         },
         {
@@ -2131,9 +1999,9 @@ window.PORTFOLIO_DATA = {
       ],
       solutions: [
         "Framed climate action as a tactical defense loop so players could act on the theme instead of only reading about it.",
-        "Used animal towers to make climate solutions more memorable, approachable, and legible at game scale.",
+        "Used animal towers to make climate solutions more memorable, approachable, and readable at game scale.",
         "Kept UI feedback simple and high-contrast so build, wave, and temperature decisions remained readable.",
-        "Paired the public itch.io release with design documentation so the game has both playable proof and process proof."
+        "Paired the public itch.io release with design documentation so the game has both a playable build and a clear process record."
       ],
       takeaways: [
         "Climate games work best when the theme becomes a mechanic the player can reason about.",
@@ -2155,18 +2023,18 @@ window.PORTFOLIO_DATA = {
       status: "TAC 485 final project",
       glyph: "ᜎᜓᜈ᜔ᜇᜄ᜔",
       color: "night",
-      coverImage: "assets/black-placeholder.svg",
-      coverAlt: "Black placeholder reserved for a future Q*bert cover image.",
+      coverImage: "assets/qbert-engine/qbert-cover.png",
+      coverAlt: "Q*bert Engine Final gameplay still showing the cube pyramid, player character, and enemy spheres.",
       links: [
         { label: "Gameplay video", url: "#media" },
-        { label: "Technical proof", url: "#technical" },
-        { label: "Visual proof", url: "#screens" },
+        { label: "Technical notes", url: "#technical" },
+        { label: "Selected media", url: "#screens" },
         { label: "Process", url: "#process" }
       ],
       summary:
         "A TAC 485 Programming Games Engine final where I was given the assets and models, then coded the playable Q*bert-style loop, board generation, movement, enemies, collisions, and win/loss states.",
       what:
-        "Q*bert Engine Final was my programming-games-engine final project. The supplied material gave me character assets, models, animations, textures, shaders, and level data, but I had to code the actual game behavior: the generated cube pyramid, diagonal grid movement, jump arcs, color-changing cube state, enemy spawning, snake-chase behavior, collision checks, fall resets, and win conditions. The page now uses the gameplay capture as the concrete media proof while reserving black placeholders for future stills.",
+        "Q*bert Engine Final was my programming-games-engine final project. The supplied material gave me character assets, models, animations, textures, shaders, and level data, but I had to code the actual game behavior: the generated cube pyramid, diagonal grid movement, jump arcs, color-changing cube state, enemy spawning, snake-chase behavior, collision checks, fall resets, and win conditions. The page uses gameplay capture to show the implementation without exposing the full local course source.",
       goals: [
         "Turn supplied assets and models into a complete playable Q*bert-style game loop.",
         "Generate the isometric cube pyramid and per-cube completion state through code.",
@@ -2179,7 +2047,7 @@ window.PORTFOLIO_DATA = {
         "Board movement had to work on a triangular pyramid grid, where valid neighbors change depending on row and column.",
         "Enemies needed their own timing and state rules while still colliding cleanly with the player on shared cube positions.",
         "Invalid jumps had to become readable fall/reset moments instead of silent input failures.",
-        "The portfolio should show technical proof without exposing the full local course project source."
+        "The portfolio should show the technical work without exposing the full local course project source."
       ],
       process: [
         {
@@ -2252,71 +2120,33 @@ window.PORTFOLIO_DATA = {
         trailers: [
           {
             src: "assets/qbert-engine/qbert-gameplay.mp4",
+            poster: "assets/qbert-engine/qbert-cover.png",
             eyebrow: "Gameplay",
             title: "Q*bert engine gameplay recording",
             body: "A screen recording of the playable Q*bert-style loop running with the implemented board movement, cube state, hazards, and reset behavior."
           }
         ]
       },
-      screensTitle: "Engine proof",
+      screensTitle: "Engine notes",
       screens: [
         {
-          image: "assets/black-placeholder.svg",
-          alt: "Black placeholder reserved for a future Q*bert gameplay overview still.",
-          eyebrow: "Cover",
-          title: "Playable Q*bert-style final",
-          body: "Placeholder slot for a future overview still of the coded loop built around supplied course assets and models."
-        },
-        {
-          image: "assets/black-placeholder.svg",
-          alt: "Black placeholder reserved for a future Q*bert board-generation still.",
-          eyebrow: "Board system",
-          title: "Generated pyramid and cube state",
-          body: "Placeholder slot for future media showing the generated rows, columns, cube colors, and completion state."
-        },
-        {
-          image: "assets/black-placeholder.svg",
-          alt: "Black placeholder reserved for a future Q*bert enemy-state still.",
-          eyebrow: "Hazards",
-          title: "Enemy state machines",
-          body: "Placeholder slot for future media showing red hazards, purple sphere/snake behavior, and board-coordinate collision logic."
-        },
-        {
-          image: "assets/black-placeholder.svg",
-          alt: "Black placeholder reserved for a future Q*bert input and collision still.",
-          eyebrow: "Input + collision",
-          title: "Diagonal jump and reset loop",
-          body: "Placeholder slot for future media showing diagonal board jumps, invalid jumps, falls, resets, and enemy collisions."
+          image: "assets/qbert-engine/qbert-cover.png",
+          alt: "Q*bert Engine Final gameplay still showing the cube pyramid, player character, and enemy spheres.",
+          eyebrow: "Gameplay still",
+          title: "Generated cube pyramid in play",
+          body: "The still comes from the gameplay recording and shows the implemented board, cube color state, player movement space, and enemy hazards.",
+          fit: "cover",
+          position: "center"
         }
       ],
       gallery: [
         {
-          image: "assets/black-placeholder.svg",
-          alt: "Black placeholder reserved for a future Q*bert asset-pipeline still.",
-          eyebrow: "Asset pipeline",
-          title: "Supplied assets, coded behavior",
-          body: "Placeholder slot for future media separating provided asset/model material from the gameplay systems I implemented."
-        },
-        {
-          image: "assets/black-placeholder.svg",
-          alt: "Black placeholder reserved for a future Q*bert board-generation detail still.",
-          eyebrow: "Implementation",
-          title: "Board-generation detail",
-          body: "Generated cube placement kept the board data-driven enough for movement, enemy logic, and win checks."
-        },
-        {
-          image: "assets/black-placeholder.svg",
-          alt: "Black placeholder reserved for a future Q*bert enemy-behavior detail still.",
-          eyebrow: "Implementation",
-          title: "Hazard behavior detail",
-          body: "Hazards needed timing, state, spawn, hatching, chase, and reset rules to feel like a game instead of a scene."
-        },
-        {
-          image: "assets/black-placeholder.svg",
-          alt: "Black placeholder reserved for a future Q*bert control-and-collision detail still.",
-          eyebrow: "Implementation",
-          title: "Player control detail",
-          body: "Movement, falls, collision checks, and resets make the supplied assets respond as a playable Q*bert system."
+          image: "assets/qbert-engine/qbert-cover.png",
+          alt: "Q*bert Engine Final gameplay still used as the project cover.",
+          eyebrow: "Cover",
+          title: "Gameplay-derived cover",
+          body: "The project card uses a frame from the actual gameplay recording, keeping the media tied to the implementation.",
+          fit: "cover"
         }
       ],
       solutions: [
@@ -2324,12 +2154,12 @@ window.PORTFOLIO_DATA = {
         "Used a jump state with start position, target position, timer, duration, and sine-height offset to make discrete grid moves feel animated.",
         "Handled invalid moves as falling/reset behavior so player mistakes became visible feedback.",
         "Separated enemy state machines from player movement while keeping collisions grounded in the same board-position model.",
-        "Kept the public proof focused on gameplay capture and placeholder media slots because the source lives in a local course project."
+        "Kept the public page focused on gameplay capture because the source lives in a local course project."
       ],
       takeaways: [
         "A simple arcade game becomes an engine exercise once every visual asset needs code to make it playable.",
         "Board-coordinate logic is the backbone: movement, AI, collision, reset, and win checks become easier when they share one model.",
-        "Discrete movement still needs motion polish. The jump arc and fall behavior make grid logic feel physical.",
+        "Discrete movement still needs motion feel. The jump arc and fall behavior make grid logic feel physical.",
         "A focused gameplay capture can explain a local class project without publishing the full source."
       ],
       launchNote:
@@ -2351,7 +2181,7 @@ window.PORTFOLIO_DATA = {
       links: [
         { label: "Presentation PDF", url: "assets/board-games/yokai/yokai-paradox-presentation.pdf" },
         { label: "Full rules PDF", url: "assets/board-games/yokai/yokai-paradox-rules.pdf" },
-        { label: "Visual proof", url: "#screens" },
+        { label: "Selected media", url: "#screens" },
         { label: "Process", url: "#process" }
       ],
       summary:
@@ -2367,11 +2197,11 @@ window.PORTFOLIO_DATA = {
       constraints: [
         "The initial flippable board concept created confusion because each side needed mechanics that related cleanly to the other.",
         "The team had to move from ambitious premise to a playable physical prototype within a class production schedule.",
-        "Rules, setup, and player objectives needed to be legible to first-time players without a designer explaining every step.",
-        "Usability feedback had to become concrete revisions: clearer rulebook language, diagrams, and more readable components."
+        "Rules, setup, and player objectives needed to be clear to first-time players without a designer explaining every step.",
+        "Usability feedback had to become specific revisions: clearer rulebook language, diagrams, and more readable components."
       ],
       process: [
-        { title: "Prototype the premise", body: "Built early physical components around the exorcist museum concept, then tested whether the double-sided board idea could support actual play." },
+        { title: "Prototype the premise", body: "Built early physical components around the exorcist museum concept, then tested whether the double-sided board idea could hold up in actual play." },
         { title: "Observe confusion", body: "Used in-class playtests to watch where players got stuck, especially around board sides, rule interpretation, and tension level." },
         { title: "Revise for usability", body: "Helped rework the rules and setup language so the game could be learned more easily by new players." },
         { title: "Polish components", body: "Worked through character cards, board modifications, and presentation material so the prototype felt cohesive and playable." }
@@ -2391,10 +2221,10 @@ window.PORTFOLIO_DATA = {
         {
           eyebrow: "Components",
           title: "Character and lore cards",
-          body: "The card set and newspaper artifact gave the supernatural premise a tangible identity while supporting the revised play loop."
+          body: "The card set and newspaper artifact gave the supernatural premise a tangible identity inside the revised play loop."
         }
       ],
-      screensTitle: "Prototype + playtest proof",
+      screensTitle: "Prototype + playtest notes",
       screens: [
         {
           image: "assets/board-games/yokai/yokai-week12-prototype.jpg",
@@ -2445,7 +2275,7 @@ window.PORTFOLIO_DATA = {
           image: "assets/board-games/yokai/yokai-newspaper.png",
           alt: "Newspaper-style Yokai Paradox lore and component sheet.",
           eyebrow: "Lore artifact",
-          title: "Newspaper-style proof",
+          title: "Newspaper-style lore",
           body: "The newspaper page presents the museum premise and component language as an in-world artifact.",
           fit: "contain"
         },
@@ -2468,7 +2298,7 @@ window.PORTFOLIO_DATA = {
       solutions: [
         "Shifted from a clever board concept toward a playable rule structure after observing confusion in real playtests.",
         "Treated setup guidance and diagrams as part of the user experience, not just documentation.",
-        "Used character and lore artifacts to keep the supernatural tone visible while mechanics were being simplified.",
+        "Used character and lore pieces to keep the supernatural tone visible while mechanics were being simplified.",
         "Balanced design ambition with usability so the final prototype could be taught and tested more reliably."
       ],
       takeaways: [
@@ -2496,7 +2326,7 @@ window.PORTFOLIO_DATA = {
       links: [
         { label: "Mechanics presentation", url: "assets/board-games/hansel-vs-gretel/hansel-vs-gretel-mechanics-presentation.pdf" },
         { label: "Card PDF", url: "assets/board-games/hansel-vs-gretel/hansel-vs-gretel-cards.pdf" },
-        { label: "Playtest proof", url: "#screens" },
+        { label: "Playtest notes", url: "#screens" },
         { label: "Card gallery", url: "#gallery" }
       ],
       summary:
@@ -2520,7 +2350,7 @@ window.PORTFOLIO_DATA = {
       process: [
         {
           title: "Roll and interpret constraints",
-          body: "Started from one-vs-one interaction, physical dexterity, fairy tale/myth premise, and solution objective, then looked for a structure where those constraints could support each other."
+          body: "Started from one-vs-one interaction, physical dexterity, fairy tale/myth premise, and solution objective, then looked for a structure where those constraints could work together."
         },
         {
           title: "Build the escape-room premise",
@@ -2567,7 +2397,7 @@ window.PORTFOLIO_DATA = {
           body: "The team identified that players preferred shown instructions, clearer challenge diagrams, and an end game where the winner felt deserving."
         }
       ],
-      screensTitle: "Mechanics presentation proof",
+      screensTitle: "Mechanics presentation",
       screens: [
         {
           image: "assets/board-games/hansel-vs-gretel/hansel-mechanics-slide-02.jpg",
@@ -2645,7 +2475,7 @@ window.PORTFOLIO_DATA = {
         },
         {
           image: "assets/board-games/hansel-vs-gretel/hansel-mechanics-slide-10.jpg",
-          alt: "Hansel vs. Gretel next steps slide with future challenge, hint, diagram, and theme expansion ideas.",
+          alt: "Hansel vs. Gretel next steps slide with additional challenge, hint, diagram, and theme expansion ideas.",
           eyebrow: "Next steps",
           title: "Expansion plan",
           body: "Future work would add more dexterity challenges, rebalance hints, expand mythic beings, and create clearer diagrams.",
@@ -2672,7 +2502,7 @@ window.PORTFOLIO_DATA = {
           alt: "Thumb War card from Hansel vs. Gretel.",
           eyebrow: "Challenge",
           title: "Thumb War card",
-          body: "Existing card proof remains available alongside the mechanics presentation.",
+          body: "The original card art remains available alongside the mechanics presentation.",
           fit: "contain"
         },
         {
@@ -2686,7 +2516,7 @@ window.PORTFOLIO_DATA = {
       ],
       solutions: [
         "Focused on physical dexterity first, then integrated the solution layer through clues and mythic-being guesses.",
-        "Changed the answer category from early quote and fairy-tale ideas into mythical beings so hints could support deduction more clearly.",
+        "Changed the answer category from early quote and fairy-tale ideas into mythical beings so hints could guide deduction more clearly.",
         "Removed or replaced challenges that felt like strength or endurance tests instead of dexterity games.",
         "Added pictures and clearer wording because players did not want to learn unfamiliar physical challenges through dense text alone.",
         "Adjusted hint distribution to create comeback potential, then identified the need to rebalance final hints so they are not giveaways.",
@@ -2700,7 +2530,7 @@ window.PORTFOLIO_DATA = {
         "Specialized team roles and regular progress updates helped the group move from rough concept to tested prototype."
       ],
       launchNote:
-        "The mechanics presentation PDF and original card PDF are included as local portfolio artifacts. The presentation documents the constraint roll, two playtest iterations, data tables, next steps, and design/communication lessons.",
+        "The mechanics presentation PDF and original card PDF are included as local portfolio records. The presentation documents the constraint roll, two playtest iterations, data tables, next steps, and design/communication lessons.",
       cardNote: "escape-room prototype · dexterity · playtest iteration"
     },
     {
@@ -2717,7 +2547,7 @@ window.PORTFOLIO_DATA = {
       coverAlt: "Race Against Thieves pixel-art title slide with sword, controller, stars, and Team 4 label.",
       links: [
         { label: "Presentation PDF", url: "assets/board-games/race-against-thieves/race-against-thieves-presentation.pdf" },
-        { label: "Visual proof", url: "#screens" },
+        { label: "Selected media", url: "#screens" },
         { label: "Process", url: "#process" }
       ],
       summary:
@@ -2757,10 +2587,10 @@ window.PORTFOLIO_DATA = {
         {
           eyebrow: "Art",
           title: "Prototype readability",
-          body: "Board and card art supported the museum-thief theme while helping players understand spaces, obstacles, and progress."
+          body: "Board and card art carried the museum-thief theme while helping players understand spaces, obstacles, and progress."
         }
       ],
-      screensTitle: "Process + playtest proof",
+      screensTitle: "Process + playtest notes",
       screens: [
         {
           image: "assets/board-games/race-against-thieves/race-drafting-sketch.jpg",
@@ -2817,7 +2647,7 @@ window.PORTFOLIO_DATA = {
         {
           image: "assets/board-games/race-against-thieves/race-class-playtest.jpg",
           alt: "Players testing Race Against Thieves in class.",
-          eyebrow: "Class proof",
+          eyebrow: "Class playtest",
           title: "In-class observation",
           body: "Class testing made the tension problem visible enough to revise around it."
         }
@@ -2826,17 +2656,17 @@ window.PORTFOLIO_DATA = {
         "Used the experience goal as the filter for revisions: if a mechanic did not increase race tension, it needed another pass.",
         "Compared internal, class, and external playtests to see whether the same mechanics felt different across audiences.",
         "Helped with art and component clarity so players could read the museum-thief premise quickly.",
-        "Turned a broad mod concept into a concrete board, card, and playtest package."
+        "Turned a broad mod concept into a specific board, card, and playtest package."
       ],
       takeaways: [
         "Experience goals are useful only when playtests can challenge them.",
         "Competition is not automatic in a race game; the rules have to create meaningful pressure.",
         "External playtests are valuable because they reveal which explanations and mechanics survive outside the classroom.",
-        "Art support for physical prototypes matters most when it improves readability and theme at the table."
+        "Art help for physical prototypes matters most when it improves readability and theme at the table."
       ],
       launchNote:
         "Built as a CTIN 488 mechanics project. The linked presentation PDF and cropped photos show the drafting, playtesting, revision, and external testing process.",
-      cardNote: "board game mod · playtesting · art support"
+      cardNote: "board game mod · playtesting · art help"
     },
     {
       slug: "philippines-photo-diary",
@@ -2854,7 +2684,7 @@ window.PORTFOLIO_DATA = {
         { label: "Photo Gallery", url: "#" }
       ],
       summary:
-        "A future photography archive for travel images from the Philippines, designed to blend into the website background and page textures.",
+        "A planned photography archive for travel images from the Philippines, shaped to blend into the website background and page textures.",
       what:
         "This section is built for the photos you plan to add: rice terraces, ocean textures, streets, family moments, food, signage, and quiet documentary details.",
       goals: [
@@ -2868,7 +2698,7 @@ window.PORTFOLIO_DATA = {
         "Captions should be personal but still comfortable for a public portfolio."
       ],
       process: [
-        { title: "Select images", body: "Pick photos that support the site mood: terraces, water, palms, warm light, and texture." },
+        { title: "Select images", body: "Pick photos that shape the site mood: terraces, water, palms, warm light, and texture." },
         { title: "Create treatments", body: "Use consistent crops, film borders, captions, and color grading." },
         { title: "Place them intentionally", body: "Use photos as backgrounds, dividers, hero images, and gallery frames." }
       ],
@@ -2879,7 +2709,7 @@ window.PORTFOLIO_DATA = {
       ],
       takeaways: [
         "A portfolio feels more personal when the visual language comes from your own archive.",
-        "Photography can support engineering work by making the site more memorable.",
+        "Photography can make the engineering work feel more situated and memorable.",
         "Future improvement: add location captions and a map-based travel section."
       ],
       gallery: ["Rice terraces", "Ocean still", "Street texture"],
@@ -2909,7 +2739,7 @@ window.PORTFOLIO_DATA = {
       summary:
         "A 2024-2025 cultural production cycle where I served as PACE Director, oversaw PACF and PACN production, wrote the Pamana script, and directed rehearsals toward the final stage show.",
       what:
-        "Pamana was Troy Philippines' 33rd Annual Pilipinx American Culture Night, built as the main stage event in a larger Pilipinx American Culture Events season. As PACE Director, I oversaw the production pipeline from PACF, the prelude culture festival, into PACN, the full show. My work combined executive production, script writing, rehearsal direction, cast coordination, technical planning, and cultural stewardship. I wrote the PACN script around an eight-scene story of friendship, family, distance, homecoming, and inherited memory, then directed skit rehearsals so the actors, dance transitions, vocal performances, and technical cues could land as one cohesive production.",
+        "Pamana was Troy Philippines' 33rd Annual Pilipinx American Culture Night, built as the main stage event in a larger Pilipinx American Culture Events season. As PACE Director, I carried the production from PACF, the prelude culture festival, into PACN, the full show. My work combined executive production, script writing, rehearsal direction, cast coordination, technical planning, and cultural stewardship. I wrote the PACN script around an eight-scene story of friendship, family, distance, homecoming, and inherited memory, then directed skit rehearsals so the actors, dance transitions, vocal performances, and technical cues could land as one cohesive production.",
       goals: [
         "Oversee the full 2024-2025 PACE production cycle, from PACF as the cultural prelude to PACN as the culminating stage show.",
         "Write a PACN script that could carry Pamana's emotional arc while leaving space for dance, music, and community performance.",
@@ -2919,7 +2749,7 @@ window.PORTFOLIO_DATA = {
       ],
       constraints: [
         "PACF and PACN had to feel connected, even though one functioned as a festival prelude and the other as the full stage production.",
-        "The script needed to support an eight-scene narrative while also making room for cultural dances, Troy Phi Voices, scene changes, and technical transitions.",
+        "The script needed to carry an eight-scene narrative while also making room for cultural dances, Troy Phi Voices, scene changes, and technical transitions.",
         "Rehearsal time had to balance line work, blocking, relationship-building, feedback, performer confidence, and full-production timing.",
         "Production leadership involved many different document streams: budgets, contracts, checklists, coordinator notes, sponsorship, headshots, attendance, and performer communication.",
         "A public portfolio page needs to show the scale of the work without exposing private cast information or internal production files."
@@ -2996,7 +2826,7 @@ window.PORTFOLIO_DATA = {
         }
       ],
       solutions: [
-        "Treated PACN as both a story and a production system: the script, rehearsals, technical plan, and operations documents had to support each other.",
+        "Treated PACN as both a story and a production system: the script, rehearsals, technical plan, and operations documents all had to work together.",
         "Used PACF as the prelude to build momentum and cultural context before the larger PACN performance cycle.",
         "Wrote scene transitions that could hand off naturally into dances and vocal pieces instead of treating performances as disconnected inserts.",
         "Directed rehearsals around relationships and stakes so the central friendship carried emotional continuity across childhood, adolescence, migration, letters, and return.",
@@ -3072,34 +2902,6 @@ window.PORTFOLIO_DATA = {
           title: "PACF 2024 timeline",
           body: "The timeline page documents the performance order, cultural context, and programming behind the PACF prelude.",
           fit: "contain"
-        },
-        {
-          image: "assets/black-placeholder.svg",
-          alt: "Black placeholder reserved for future Pamana final-draft script media.",
-          eyebrow: "Script",
-          title: "36-page Pamana final draft",
-          body: "Placeholder slot for future media showing the writing artifact behind the production."
-        },
-        {
-          image: "assets/black-placeholder.svg",
-          alt: "Black placeholder reserved for future Pamana technical-document media.",
-          eyebrow: "Technical",
-          title: "Eight-scene technical document",
-          body: "Placeholder slot for future media showing scene-by-scene staging and cue planning."
-        },
-        {
-          image: "assets/black-placeholder.svg",
-          alt: "Black placeholder reserved for future Pamana directing-notes media.",
-          eyebrow: "Rehearsal",
-          title: "Actor-centered directing notes",
-          body: "Directing notes document the rehearsal approach behind the stageplay."
-        },
-        {
-          image: "assets/black-placeholder.svg",
-          alt: "Black placeholder reserved for a future Pamana production-system visual.",
-          eyebrow: "Production system",
-          title: "PACE director workflow",
-          body: "Placeholder slot for future media capturing the production leadership layer without exposing private records."
         }
       ],
       launchNote:
@@ -3126,21 +2928,21 @@ window.PORTFOLIO_DATA = {
         { label: "Rehearsal process", url: "#process" }
       ],
       summary:
-        "A 2025-2026 PACN stageplay where I served as a scriptwriter and helped the PACE directors run stageplay rehearsals, supporting the story without holding a director title.",
+        "A 2025-2026 PACN stageplay where I served as a scriptwriter and helped the PACE directors run stageplay rehearsals, contributing to the story without holding a director title.",
       what:
-        "Pagkakaisa was the 2025-2026 Pilipinx American Culture Night stageplay built around a new Filipino Studies class, a friend group navigating representation and belonging, and a university learning what it means to build culture with the community in the room. I was a scriptwriter for the stageplay and helped the PACE directors run rehearsals. I was not a director this year, so my contribution lived in the writing, actor support, rehearsal flow, scene work, and making sure the stageplay connected cleanly to the larger PACN production.",
+        "Pagkakaisa was the 2025-2026 Pilipinx American Culture Night stageplay built around a new Filipino Studies class, a friend group navigating representation and belonging, and a university learning what it means to build culture with the community in the room. I was a scriptwriter for the stageplay and helped the PACE directors run rehearsals. I was not a director this year, so my contribution lived in the writing, actor notes, rehearsal flow, scene work, and making sure the stageplay connected cleanly to the larger PACN production.",
       goals: [
         "Help write a stageplay that could carry Pagkakaisa's themes of unity, representation, Filipino Studies, and community accountability.",
-        "Support the PACE directors during stageplay rehearsals without overstating my role as a director.",
+        "Assist the PACE directors during stageplay rehearsals without overstating my role as a director.",
         "Build character arcs for JP, Krys, Ida, Raf, Baculanta, and Reyes that made cultural conflict playable for actors.",
         "Connect scenes naturally to PACN performances so the script, dances, vocal pieces, and show order felt like one production.",
-        "Keep rehearsal support practical: actor notes, scene pacing, relationship beats, transitions, and performance readiness."
+        "Keep my rehearsal help practical: actor notes, scene pacing, relationship beats, transitions, and performance readiness."
       ],
       constraints: [
-        "I was not a director for the 2025-2026 season, so the portfolio needed to name the contribution precisely: scriptwriter and rehearsal support.",
+        "I was not a director for the 2025-2026 season, so the portfolio needed to name the contribution precisely: scriptwriter and rehearsal collaborator.",
         "The stageplay had to fit inside a larger PACN show with speeches, dances, Troy Phi Voices, quick changes, and production transitions.",
         "The story needed to handle representation across Luzon, Visayas, Mindanao, Metro Manila, multiracial identity, and Filipino Studies without flattening the characters.",
-        "Rehearsal support had to align with the PACE directors' vision while still giving actors clear, playable notes.",
+        "My rehearsal work had to align with the PACE directors' vision while still giving actors clear, playable notes.",
         "Internal audition notes, cast logistics, and rehearsal materials should stay private even though the public show recording can be linked."
       ],
       process: [
@@ -3160,9 +2962,9 @@ window.PORTFOLIO_DATA = {
             "Used character breakdowns, performance notes, and audition sides to clarify each role's emotional engine before rehearsals."
         },
         {
-          title: "Support rehearsals",
+          title: "Assist rehearsals",
           body:
-            "Helped the PACE directors run stageplay rehearsals by supporting scene work, actor timing, relationship beats, and practical staging needs."
+            "Helped the PACE directors run stageplay rehearsals through scene work, actor timing, relationship beats, and practical staging needs."
         },
         {
           title: "Integrate performances",
@@ -3181,7 +2983,7 @@ window.PORTFOLIO_DATA = {
           eyebrow: "Role clarity",
           title: "Scriptwriter, not director",
           body:
-            "The case study names the boundary clearly: I helped write the stageplay and supported rehearsals, while the PACE directors held the formal directing role."
+            "The case study names the boundary clearly: I helped write the stageplay and assisted rehearsals, while the PACE directors held the formal directing role."
         },
         {
           eyebrow: "Narrative",
@@ -3203,9 +3005,9 @@ window.PORTFOLIO_DATA = {
         },
         {
           eyebrow: "Rehearsal",
-          title: "Actor-support workflow",
+          title: "Actor notes + rehearsal help",
           body:
-            "Rehearsal support focused on scene objectives, emotional turns, pacing, transitions, and making notes actionable for performers."
+            "My rehearsal notes focused on scene objectives, emotional turns, pacing, transitions, and making feedback actionable for performers."
         },
         {
           eyebrow: "Show order",
@@ -3219,11 +3021,11 @@ window.PORTFOLIO_DATA = {
         "Used the friend group's fracture to make Pagkakaisa mean something earned, not just stated: unity comes after disagreement, accountability, and listening.",
         "Built performance transitions into the script so PACN dances and TPV numbers could emerge from scene context.",
         "Created audition and character material that helped actors understand not only what their characters say, but what they are trying to protect.",
-        "Helped rehearsals stay aligned with the PACE directors by supporting execution instead of taking ownership of the director role.",
+        "Helped rehearsals stay aligned with the PACE directors by focusing on execution instead of taking ownership of the director role.",
         "Kept private production materials local while linking the public show recording for the portfolio."
       ],
       takeaways: [
-        "A support role still shapes a production when the writing, rehearsal notes, and actor work are clear.",
+        "A collaborator role still shapes a production when the writing, rehearsal notes, and actor work are clear.",
         "Role clarity matters. This year taught me how to contribute strongly without claiming a title I did not hold.",
         "Stage writing for PACN means writing around music, dance, blackout timing, quick changes, and bodies moving through a live room.",
         "Pagkakaisa works because unity is not treated as automatic; the characters have to move through discomfort before solidarity feels honest.",
@@ -3238,44 +3040,16 @@ window.PORTFOLIO_DATA = {
           body: "The cover anchors the page in the public 2025-2026 performance archive."
         },
         {
-          image: "assets/black-placeholder.svg",
-          alt: "Black placeholder reserved for future Pagkakaisa script media.",
-          eyebrow: "Script",
-          title: "Nine-scene stageplay draft",
-          body: "Placeholder slot for future media showing the writing layer credited to Angelica Baclig and Joshua Guico."
-        },
-        {
-          image: "assets/black-placeholder.svg",
-          alt: "Black placeholder reserved for future Pagkakaisa show-flow media.",
-          eyebrow: "Show flow",
-          title: "Show-order and quick-change table",
-          body: "Placeholder slot for future media showing how stageplay scenes were placed among speeches and performances."
-        },
-        {
-          image: "assets/black-placeholder.svg",
-          alt: "Black placeholder reserved for future Pagkakaisa audition-material media.",
-          eyebrow: "Actor material",
-          title: "Audition sides and character work",
-          body: "Placeholder slot for future media documenting the character material used before rehearsals."
-        },
-        {
-          image: "assets/black-placeholder.svg",
-          alt: "Black placeholder reserved for a future Pagkakaisa rehearsal-support visual.",
-          eyebrow: "Rehearsal support",
-          title: "Scriptwriter and rehearsal support workflow",
-          body: "Placeholder slot for future media clarifying scriptwriter and rehearsal-support work."
-        },
-        {
           image: "assets/pacn/pagkakaisa-show-cover.jpg",
-          alt: "PACN Pagkakaisa video thumbnail reused as public performance proof.",
+          alt: "PACN Pagkakaisa video thumbnail reused as a public performance record.",
           eyebrow: "Public archive",
-          title: "Final performance proof",
-          body: "The public recording is the shareable proof point for the stageplay's final production context."
+          title: "Final performance record",
+          body: "The public recording keeps the stageplay's final production context available to watch."
         }
       ],
       launchNote:
         "The public link points to the full PACN: Pagkakaisa show recording. The page also includes the full-script PDF and available show-order PDF; audition notes, cast notes, and private rehearsal materials stay local/private.",
-      cardNote: "scriptwriter · rehearsal support · PACN"
+      cardNote: "scriptwriter · rehearsal help · PACN"
     }
   ]
 };

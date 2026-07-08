@@ -27,6 +27,28 @@ const categoryPageMap = {
   production: "production.html"
 };
 
+const featuredProjectSlugs = [
+  "photo-diary",
+  "playtestiq",
+  "glorgos-microplastics-mine",
+  "open-your-browser",
+  "pacn-pamana",
+  "web-server-client"
+];
+
+const secondaryProjectSlugs = [
+  "neuromancer",
+  "scythe-of-sidereal",
+  "cafe-noir",
+  "earthline-protocol",
+  "qbert-engine-final",
+  "yokai-paradox",
+  "hansel-vs-gretel",
+  "race-against-thieves-up-the-river",
+  "philippines-photo-diary",
+  "pacn-pagkakaisa"
+];
+
 // keeps film-border variants swappable from one place.
 const projectFilmStyles = [
   "film-style-orange"
@@ -59,6 +81,19 @@ function categoryUrl(category) {
   return categoryPageMap[category] || "index.html";
 }
 
+function projectsFromSlugs(slugs) {
+  return slugs.map((slug) => projects.find((project) => project.slug === slug)).filter(Boolean);
+}
+
+function hasRealImage(src = "") {
+  return Boolean(src);
+}
+
+function visibleScreensFor(project) {
+  return (Array.isArray(project.screens) ? project.screens : [])
+    .filter((screen) => hasRealImage(screen.image));
+}
+
 // escapes user-facing content before injecting template html.
 function escapeHtml(value = "") {
   return String(value)
@@ -77,7 +112,7 @@ function projectUrl(project) {
 // renders one film-card preview for home, archive, and related grids.
 function projectCard(project, index) {
   const filmStyle = filmStyleFor(index);
-  const hasCover = Boolean(project.coverImage);
+  const hasCover = hasRealImage(project.coverImage);
   return `
     <a class="project-card ${filmStyle}" href="${projectUrl(project)}" style="--card-gradient: ${gradientFor(project)}" aria-label="Open ${escapeHtml(project.title)} case study">
       <div class="project-stock" aria-hidden="true">
@@ -114,7 +149,7 @@ function imageDimensionAttributes(item) {
   return ` width="${width}" height="${height}"`;
 }
 
-// stores media metadata on triggers so one lightbox can open any proof item.
+// stores media metadata on triggers so one lightbox can open any media item.
 function mediaLightboxAttributes(item = {}, fallbackTag = "Media") {
   const type = item.type || (String(item.src || item.image || "").match(/\.(mp4|mov|m4v|webm)$/i) ? "video" : "image");
   const src = item.src || item.image || "";
@@ -387,23 +422,7 @@ function renderProjects() {
     }
 
     if (mode === "featured") {
-      const preferred = [
-        "photo-diary",
-        "playtestiq",
-        "web-server-client",
-        "glorgos-microplastics-mine",
-        "earthline-protocol",
-        "qbert-engine-final",
-        "yokai-paradox",
-        "hansel-vs-gretel",
-        "race-against-thieves-up-the-river",
-        "neuromancer",
-        "open-your-browser",
-        "scythe-of-sidereal",
-        "usc-esports-graphics",
-        "pacn-pamana"
-      ];
-      list = preferred.map((slug) => projects.find((project) => project.slug === slug)).filter(Boolean);
+      list = projectsFromSlugs(featuredProjectSlugs);
     }
 
     container.innerHTML = list.slice(0, limit).map(projectCard).join("");
@@ -475,14 +494,24 @@ function renderCategoryHero() {
 function renderReel() {
   const container = document.querySelector("[data-render-reel]");
   if (!container) return;
-  const reelProjects = projects.slice(0, 8);
+  const reelProjects = projectsFromSlugs(secondaryProjectSlugs);
   container.innerHTML = reelProjects
-    .map((project, index) => `
-      <a class="reel-frame ${filmStyleFor(index, reelFilmStyles)}" href="${projectUrl(project)}" data-frame="${String(index + 1).padStart(2, "0")} / ${escapeHtml(project.category.toUpperCase())}" style="--card-gradient: ${gradientFor(project)}">
-        <h3>${escapeHtml(project.title)}</h3>
-        <p>${escapeHtml(project.cardNote || project.type)}</p>
-      </a>
-    `)
+    .map((project, index) => {
+      const hasCover = hasRealImage(project.coverImage);
+      return `
+        <a class="reel-frame ${filmStyleFor(index, reelFilmStyles)}" href="${projectUrl(project)}" data-frame="${String(index + 1).padStart(2, "0")} / ${escapeHtml(project.category.toUpperCase())}" style="--card-gradient: ${gradientFor(project)}" aria-label="Open ${escapeHtml(project.title)} case study">
+          <div class="reel-media ${hasCover ? "has-cover" : ""}">
+            ${hasCover
+              ? `<img src="${escapeHtml(project.coverImage)}" alt="${escapeHtml(project.coverAlt || `${project.title} cover image`)}" loading="lazy" decoding="async">`
+              : `<span class="baybayin reel-glyph" aria-hidden="true">${escapeHtml(project.glyph)}</span>`}
+          </div>
+          <div class="reel-copy">
+            <h3>${escapeHtml(project.title)}</h3>
+            <p>${escapeHtml(project.cardNote || project.type)}</p>
+          </div>
+        </a>
+      `;
+    })
     .join("");
 }
 
@@ -503,7 +532,7 @@ function processMarkup(items) {
     .join("");
 }
 
-// renders reusable detail cards for technical and proof sections.
+// renders reusable detail cards for technical and media sections.
 function detailCardMarkup(items = []) {
   return items
     .map((item) => `
@@ -516,12 +545,12 @@ function detailCardMarkup(items = []) {
     .join("");
 }
 
-// renders visual proof entries with optional image controls.
+// renders selected media entries with optional image controls.
 function galleryItemMarkup(item, index, project) {
   const data = typeof item === "string" ? { title: item } : item;
   const number = String(index + 1).padStart(2, "0");
-  const title = data.title || data.label || "Visual proof";
-  const kicker = data.eyebrow || data.type || "Proof";
+  const title = data.title || data.label || "Selected media";
+  const kicker = data.eyebrow || data.type || "Media";
   const body = data.body || "";
   const imageStyles = [];
   if (data.position) imageStyles.push(`object-position: ${escapeHtml(data.position)};`);
@@ -535,10 +564,10 @@ function galleryItemMarkup(item, index, project) {
             image: data.image,
             title,
             eyebrow: `${number} · ${kicker}`,
-            alt: data.alt || `${project.title} visual proof: ${title}`,
+            alt: data.alt || `${project.title} media: ${title}`,
             body
-          }, "Visual proof")} aria-label="Enlarge ${escapeHtml(title)}">
-            <img src="${escapeHtml(data.image)}" alt="${escapeHtml(data.alt || `${project.title} visual proof: ${title}`)}" loading="lazy" decoding="async" style="${imageStyles.join(" ")}">
+          }, "Selected media")} aria-label="Enlarge ${escapeHtml(title)}">
+            <img src="${escapeHtml(data.image)}" alt="${escapeHtml(data.alt || `${project.title} media: ${title}`)}" loading="lazy" decoding="async" style="${imageStyles.join(" ")}">
           </button>
         </figure>
         <div class="gallery-proof-copy">
@@ -557,7 +586,7 @@ function galleryItemMarkup(item, index, project) {
   `;
 }
 
-// renders the interface or media proof rows on project pages.
+// renders interface or media rows on project pages.
 function screenMarkup(screens = []) {
   return screens
     .map((screen, index) => {
@@ -595,15 +624,16 @@ function screenMarkup(screens = []) {
     .join("");
 }
 
-// hides the screen section when a project has no screen proof.
+// hides the screen section when a project has no screen media.
 function screenSectionMarkup(project) {
-  if (!Array.isArray(project.screens) || !project.screens.length) return "";
+  const screens = visibleScreensFor(project);
+  if (!screens.length) return "";
 
   return `
     <section class="section case-section screen-section" id="screens" data-reveal>
       <h2>${escapeHtml(project.screensTitle || "Interface screens")}</h2>
       <div class="screen-grid">
-        ${screenMarkup(project.screens)}
+        ${screenMarkup(screens)}
       </div>
     </section>
   `;
@@ -767,6 +797,8 @@ function renderProjectDetail() {
   const next = projects[(currentIndex + 1) % projects.length];
   const projectHeroFilmStyle = filmStyleFor(currentIndex + 1, heroFilmStyles);
   const gallery = Array.isArray(project.gallery) ? project.gallery : [];
+  const hasScreens = visibleScreensFor(project).length > 0;
+  const hasCover = hasRealImage(project.coverImage);
 
   root.innerHTML = `
     <section class="section project-hero">
@@ -784,12 +816,12 @@ function renderProjectDetail() {
             <div class="fact"><span>Archive</span><strong>${escapeHtml(category.label)}</strong></div>
           </div>
           <div class="hero-actions">
-            <a class="button primary" href="#launch">Launch links</a>
+            <a class="button primary" href="#launch">Links</a>
             ${project.media ? `<a class="button secondary" href="#media">Watch media</a>` : ""}
             <a class="button secondary" href="#process">Jump to process</a>
             ${Array.isArray(project.technical) && project.technical.length ? `<a class="button secondary" href="#technical">Technical build</a>` : ""}
             ${project.demo && Array.isArray(project.demo.commands) && project.demo.commands.length ? `<a class="button secondary" href="#demo">Try demo</a>` : ""}
-            ${Array.isArray(project.screens) && project.screens.length ? `<a class="button secondary" href="#screens">View screens</a>` : ""}
+            ${hasScreens ? `<a class="button secondary" href="#screens">View screens</a>` : ""}
             <a class="button secondary" href="#takeaways">Jump to takeaways</a>
           </div>
         </div>
@@ -797,7 +829,7 @@ function renderProjectDetail() {
         <aside class="project-hero-card negative-frame ${projectHeroFilmStyle}" data-reveal>
           <div class="film-edge top"><span>CASE STUDY</span><span>${escapeHtml(project.category)}</span><span>${escapeHtml(project.year)}</span></div>
           <div class="frame-window">
-            ${project.coverImage
+            ${hasCover
               ? `<button class="media-lightbox-trigger project-cover-trigger" type="button" ${mediaLightboxAttributes({
                   image: project.coverImage,
                   title: project.title,
@@ -815,7 +847,7 @@ function renderProjectDetail() {
     </section>
 
     <section class="section case-section" id="what" data-reveal>
-      <h2>What it is</h2>
+      <h2>Overview</h2>
       <div class="case-card">
         <p>${escapeHtml(project.what)}</p>
       </div>
@@ -853,7 +885,7 @@ function renderProjectDetail() {
     ${projectDemoSectionMarkup(project)}
 
     <section class="section case-section" id="solutions" data-reveal>
-      <h2>Key solutions</h2>
+      <h2>What I built</h2>
       <div class="solution-grid">
         ${listMarkup(project.solutions)}
       </div>
@@ -863,15 +895,17 @@ function renderProjectDetail() {
 
     ${screenSectionMarkup(project)}
 
-    <section class="section case-section" id="gallery" data-reveal>
-      <h2>Visual proof</h2>
-      <div class="gallery-grid">
-        ${gallery.map((item, index) => galleryItemMarkup(item, index, project)).join("")}
-      </div>
-    </section>
+    ${gallery.length ? `
+      <section class="section case-section" id="gallery" data-reveal>
+        <h2>Selected media</h2>
+        <div class="gallery-grid">
+          ${gallery.map((item, index) => galleryItemMarkup(item, index, project)).join("")}
+        </div>
+      </section>
+    ` : ""}
 
     <section class="section case-section" id="takeaways" data-reveal>
-      <h2>Takeaways</h2>
+      <h2>What I learned</h2>
       <div class="takeaway-grid">
         ${listMarkup(project.takeaways)}
       </div>
@@ -880,11 +914,11 @@ function renderProjectDetail() {
     <section class="section" id="launch" data-reveal>
       <div class="launch-card ${project.links.length > 4 ? "launch-card-dense" : ""}">
         <div class="launch-copy">
-          <p class="section-kicker">My submissions / launch links</p>
-          <h2>Play, view, or read the project.</h2>
+          <p class="section-kicker">Links + materials</p>
+          <h2>Open the public pieces of the project.</h2>
           ${project.launchNote
             ? `<p class="launch-note">${escapeHtml(project.launchNote)}</p>`
-            : `<p class="launch-note">Project links can be added in <code>data.js</code> when public builds, videos, repositories, galleries, or scripts are ready to share.</p>`}
+            : `<p class="launch-note">I add public builds, videos, repositories, galleries, or scripts here when they are ready to share.</p>`}
         </div>
         <div class="link-row launch-link-grid" aria-label="${escapeHtml(project.title)} links">
           ${project.links.map((link, index) => `
@@ -1087,26 +1121,55 @@ function setupReveal() {
 // lets horizontal film strips be dragged with a pointer.
 function setupDraggableReels() {
   document.querySelectorAll(".draggable").forEach((strip) => {
-    let isDragging = false;
+    let isPointerDown = false;
+    let hasDragged = false;
+    let suppressClick = false;
     let startX = 0;
     let scrollLeft = 0;
 
     strip.addEventListener("pointerdown", (event) => {
-      isDragging = true;
-      strip.setPointerCapture(event.pointerId);
+      isPointerDown = true;
+      hasDragged = false;
       startX = event.pageX - strip.offsetLeft;
       scrollLeft = strip.scrollLeft;
     });
 
     strip.addEventListener("pointermove", (event) => {
-      if (!isDragging) return;
+      if (!isPointerDown) return;
       const x = event.pageX - strip.offsetLeft;
-      strip.scrollLeft = scrollLeft - (x - startX) * 1.35;
+      const delta = x - startX;
+      if (Math.abs(delta) > 6) {
+        hasDragged = true;
+        strip.classList.add("is-dragging");
+        event.preventDefault();
+      }
+      if (hasDragged) strip.scrollLeft = scrollLeft - delta * 1.35;
     });
 
-    strip.addEventListener("pointerup", () => { isDragging = false; });
-    strip.addEventListener("pointercancel", () => { isDragging = false; });
-    strip.addEventListener("pointerleave", () => { isDragging = false; });
+    strip.addEventListener("click", (event) => {
+      if (!suppressClick) return;
+      event.preventDefault();
+      event.stopPropagation();
+      suppressClick = false;
+    }, true);
+
+    const endDrag = () => {
+      if (hasDragged) {
+        suppressClick = true;
+        window.setTimeout(() => { suppressClick = false; }, 0);
+      }
+      isPointerDown = false;
+      hasDragged = false;
+      strip.classList.remove("is-dragging");
+    };
+
+    strip.addEventListener("pointerup", endDrag);
+    strip.addEventListener("pointercancel", endDrag);
+    strip.addEventListener("pointerleave", () => {
+      isPointerDown = false;
+      hasDragged = false;
+      strip.classList.remove("is-dragging");
+    });
   });
 }
 
