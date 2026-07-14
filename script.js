@@ -45,7 +45,6 @@ const secondaryProjectSlugs = [
   "yokai-paradox",
   "hansel-vs-gretel",
   "race-against-thieves-up-the-river",
-  "philippines-photo-diary",
   "pacn-pagkakaisa"
 ];
 

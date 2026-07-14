@@ -2669,53 +2669,6 @@ window.PORTFOLIO_DATA = {
       cardNote: "board game mod · playtesting · art help"
     },
     {
-      slug: "philippines-photo-diary",
-      title: "Philippines Photo Diary",
-      category: "design",
-      role: "Photographer / Visual Storyteller",
-      year: "2026",
-      type: "Photography",
-      status: "Gallery draft",
-      glyph: "ᜋᜑᜎᜄ",
-      color: "terrace",
-      coverImage: "assets/rice-terraces-reference.jpg",
-      coverAlt: "Landscape rice terraces reference image used as a cover for the Philippines Photo Diary case study.",
-      links: [
-        { label: "Photo Gallery", url: "#" }
-      ],
-      summary:
-        "A planned photography archive for travel images from the Philippines, shaped to blend into the website background and page textures.",
-      what:
-        "This section is built for the photos you plan to add: rice terraces, ocean textures, streets, family moments, food, signage, and quiet documentary details.",
-      goals: [
-        "Let your own photos become the site texture, not just gallery content.",
-        "Use warm film processing, captions, and place-based storytelling.",
-        "Connect your design identity to Filipino memory and visual language."
-      ],
-      constraints: [
-        "Background photos need overlays so text remains readable.",
-        "Image file sizes should be optimized before deployment.",
-        "Captions should be personal but still comfortable for a public portfolio."
-      ],
-      process: [
-        { title: "Select images", body: "Pick photos that shape the site mood: terraces, water, palms, warm light, and texture." },
-        { title: "Create treatments", body: "Use consistent crops, film borders, captions, and color grading." },
-        { title: "Place them intentionally", body: "Use photos as backgrounds, dividers, hero images, and gallery frames." }
-      ],
-      solutions: [
-        "Added CSS variables so you can swap background photos without rewriting layouts.",
-        "Created reusable film/photo frames for galleries.",
-        "Kept the palette inspired by rice terraces: deep green, aged cream, ochre, and clay."
-      ],
-      takeaways: [
-        "A portfolio feels more personal when the visual language comes from your own archive.",
-        "Photography can make the engineering work feel more situated and memorable.",
-        "Future improvement: add location captions and a map-based travel section."
-      ],
-      gallery: ["Rice terraces", "Ocean still", "Street texture"],
-      cardNote: "photography · travel · visual memory"
-    },
-    {
       slug: "pacn-pamana",
       title: "PACN — Pamana",
       category: "production",

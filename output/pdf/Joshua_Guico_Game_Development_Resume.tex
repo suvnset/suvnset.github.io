@@ -1,0 +1,171 @@
+%-------------------------
+% Joshua Guico - Game Development Resume
+%-------------------------
+
+\documentclass[letterpaper,9pt]{extarticle}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{iftex}
+
+\ifPDFTeX
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+
+\ifPDFTeX
+  \usepackage{helvet}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  \usepackage{fontspec}
+  \setmainfont{Helvetica}
+\fi
+\usepackage[letterpaper, margin=0.5in]{geometry}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-1pt}}}}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{1pt}\item[]
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} $|$ \emph{#3} & \small #2 \\
+      \ifx\relax#4\relax
+      \else
+        \multicolumn{2}{l}{\textit{\small #4}} \\
+      \fi
+    \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.13in]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*, label={\tiny$\bullet$}]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-6pt}}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+  \textbf{\Huge \scshape Joshua Guico} \\ \vspace{2pt}
+  \small \textbf{Gameplay Programmer $|$ QA Engineer $|$ Game Developer} \\ \vspace{2pt}
+  \href{mailto:jshguico@gmail.com}{jshguico@gmail.com} $|$ (213) 595-8680 $|$
+  \href{https://linkedin.com/in/joshua-guico/}{linkedin.com/in/joshua-guico} $|$
+  \href{https://suvnset.github.io}{suvnset.github.io}
+\end{center}
+
+%-----------EDUCATION + SKILLS-----------
+\section{Education + Technical Skills}
+\resumeSubHeadingListStart
+
+\item[]
+\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+  \textbf{University of Southern California} & \textbf{Los Angeles, California} \\
+  \textit{\small M.S. Computer Science (Game Development)} & \textit{\small May 2028 (Expected)} \\
+  \textit{\small B.S. Computer Science (Games), Dean's Scholarship} & \textit{\small May 2026}
+\end{tabular*}\vspace{-5pt}
+
+\small{\textbf{Game Development:} Unity, Unreal Engine, gameplay systems, game AI, UI systems, scene management, rapid prototyping}\vspace{1pt}
+
+\small{\textbf{Programming:} C\#, C/C++, Python, JavaScript/TypeScript, Java, SQL, object-oriented design, event-driven systems}\vspace{1pt}
+
+\small{\textbf{Production + QA:} Perforce, Git/GitHub, Jira, playtesting, regression testing, bug triage, build validation, usability testing}\vspace{1pt}
+
+\small{\textbf{Additional Tools:} Visual Studio, Next.js, Node.js, PostgreSQL, Prisma, MySQL, GCP, Adobe Creative Suite}
+
+\resumeSubHeadingListEnd
+
+%-----------GAME DEVELOPMENT EXPERIENCE-----------
+\section{Game Development Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {Glorgo's Microplastics Mine}{July 2025 -- May 2026}
+  {Quality Assurance Engineer Lead}{Los Angeles, California}
+\resumeItemListStart
+  \resumeItem{Led QA for a nearly 80-person USC Games team, coordinating smoke tests, regression passes, focused playtests, and release validation through the game's Steam launch and USC Games Expo showcase}
+  \resumeItem{Built and deployed a Python Discord bot connected to Google Sheets and Apps Script, cutting bug-triage time 60\%; partnered with engineering to root-cause failures and fixed 15--25\% of outstanding bugs in weekly cycles}
+\resumeItemListEnd
+
+\resumeSubheading
+  {IndieCade}{May 2025 -- July 2025}
+  {Game Design and Programming Intern}{Remote}
+\resumeItemListStart
+  \resumeItem{Built modular C\#/Unity gameplay systems and replaced repeated frame-update logic with event-driven code, improving iteration speed 30\%}
+  \resumeItem{Delivered 6+ playable builds by resolving merge conflicts, maintaining Git-based integration, validating features, and testing build stability}
+\resumeItemListEnd
+
+\resumeSubheading
+  {Open Alpha}{Spring 2025 -- Spring 2026}
+  {Gameplay Programmer}{Los Angeles, California}
+\resumeItemListStart
+  \resumeItem{Developed and integrated Unity features with teams of 20+ programmers, designers, artists, and audio developers using modular C\# systems, task demos, pull-request reviews, and sprint-based bug fixing}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------SELECTED GAME PROJECTS-----------
+\section{Selected Game Projects}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {Open Your Browser}{Unity, C\#}
+  {Gameplay Programmer}{Spring 2025}
+\resumeItemListStart
+  \resumeItem{Programmed main-loop logic, RAM pressure, minigame result hooks, and scene transitions for a desktop-interface game built around escalating system chaos}
+  \resumeItem{Implemented rhythm-game timing with song elapsed time and target hit windows, then supported reusable CAPTCHA systems, retry flows, and late-production fixes}
+\resumeItemListEnd
+
+\resumeSubheading
+  {Neuromancer}{Unity, C\#}
+  {Gameplay Programmer}{Fall 2025}
+\resumeItemListStart
+  \resumeItem{Integrated menu, settings, credits, and gameplay scenes for a narrative management game with dialogue, potion, XP, morale, and branching-ending systems}
+  \resumeItem{Translated design requirements into modular programming tasks and documented onboarding, branching, task demos, and pull-request expectations for contributors}
+\resumeItemListEnd
+
+\resumeSubheading
+  {PlaytestIQ}{Next.js, TypeScript, PostgreSQL, Prisma}
+  {Full-Stack Developer}{Summer 2026 -- Present}
+\resumeItemListStart
+  \resumeItem{Building a game analytics platform that ingests project-scoped telemetry for players, sessions, deaths, retries, completions, and custom gameplay events}
+  \resumeItem{Designed the PostgreSQL/Prisma data model and dashboard views so developers can identify friction, compare playtest behavior, and choose what to test next}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------ADDITIONAL EXPERIENCE + LEADERSHIP-----------
+\section{Leadership + Additional Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {Makers of Entertaining Games Association}{Summer 2024 -- Spring 2026}
+  {President}{Los Angeles, California}
+\resumeItemListStart
+  \resumeItem{Led Global Game Jam for 100+ participants, coordinating team formation, production schedules, technical support, and event operations}
+  \resumeItem{Directed speaker panels, workshops, game jams, and recurring planning cycles for USC's student game-development community}
+\resumeItemListEnd
+
+\item[]\small{\textbf{Additional Software Experience:} Software Engineering Intern, Sports Media Inc. (Jan 2025 -- Jun 2025) $|$ Web Development Intern, VSFS DME (Aug 2023 -- Jan 2024)}
+
+\resumeSubHeadingListEnd
+
+\end{document}
