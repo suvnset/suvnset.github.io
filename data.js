@@ -392,7 +392,7 @@ window.PORTFOLIO_DATA = {
       body: "Troy Philippines executive board application graphic with desktop-window nostalgia and bright community imagery."
     },
     {
-      title: "Semester Seven Dump 01",
+      title: "USC Graduation Collage 1",
       type: "image",
       group: "semester-dumps",
       src: "assets/design-gallery/semester-seven-1.png",
@@ -402,7 +402,7 @@ window.PORTFOLIO_DATA = {
       body: "Film-inspired graduation spread with stole details, campus portraits, and warm archival texture."
     },
     {
-      title: "Semester Seven Dump 02",
+      title: "USC Graduation Collage 2",
       type: "image",
       group: "semester-dumps",
       src: "assets/design-gallery/semester-seven-2.png",
@@ -412,7 +412,7 @@ window.PORTFOLIO_DATA = {
       body: "Wide graduation collage mixing action blur, classroom humor, and campus portrait fragments."
     },
     {
-      title: "Semester Seven Dump 03",
+      title: "USC Graduation Collage 3",
       type: "image",
       group: "semester-dumps",
       src: "assets/design-gallery/semester-seven-3.png",
